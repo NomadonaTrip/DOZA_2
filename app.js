@@ -14,8 +14,9 @@ class SpecialHeader extends HTMLElement {
                 <ul class="navigation">
                     <a href="index.html"><li>Home</li></a>
                     <a href="about-us.html"><li>About Us</li></a>
-                    <a href="contact-us.html"><li>Contact Us</li></a>
-                    <a id="call-button" href="https://wa.me/+13659948961"><li><button>Call Us</button></li></a>
+                    <a href="contact-us.html"><li>Our Ministries</li></a>
+                    <a href="contact-us.html"><li>Give</li></a>
+                    <a id="call-button" href=""><li><button>Contact Us</button></li></a>
                 </ul>
                 <label class="hamburger-menu">
                     <input type="checkbox">
@@ -31,7 +32,7 @@ class SpecialHeader extends HTMLElement {
             </div>
         </header>
         <div class="mobile-call-button">
-            <a href="tel:1-365-994-8961"><button>Call us</button></a>
+            <a href="tel:1-365-994-8961"><button>Contact Us</button></a>
         </div>
        
     </section>

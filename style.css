@@ -3,6 +3,13 @@
 *::before {
   box-sizing: border-box;
 }
+/* Placeholder so I know what's possible with this font. Not doing anything on the website */
+.bodoni-moda {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   --bar-width: 40px;
@@ -13,8 +20,13 @@
   --hamburger-margin: 10px;
   --animation-timing: 200ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-  --brand-color-light: #a82eff;
-  --brand-color-dark: #7222ad;
+  --brand-color-light: #d80e10;
+  --brand-color-dark: #f0a62d;
+  --doza-family: "DM Serif Text", serif;
+  --doza-support: "roboto-narrow", sans-serif;
+}
+body {
+  margin: 0 auto;
 }
 .responsive-header {
   display: flex;
@@ -36,11 +48,12 @@
   box-shadow: 0 2px 4px rgba(21, 21, 21, 0.1);
 }
 #call-button button {
-  background-color: #a82eff;
+  background-color: var(--brand-color-light);
   border: none;
+  width: 8rem;
 }
 #call-button button:hover {
-  border: 1px solid #a82eff;
+  border: 1px solid var(--brand-color-light);
   background-color: transparent;
 }
 .responsive-header > .mobile-call-button {
@@ -156,7 +169,7 @@
 .hamburger-menu:has(input:checked) + .sidebar {
   translate: 0;
 }
-/* css for the header starts here */
+/* css for the primary header starts here */
 header {
   text-decoration: none;
   margin: 0;
@@ -280,6 +293,7 @@ header * {
   border-radius: 0px 0px 20px 20px;
 }
 
+/* Slider css starts here */
 .slide {
   position: absolute;
   top: 0;
@@ -308,34 +322,22 @@ header * {
     align-self: center; color: white; 
 }*/
 
-.hero-text {
+/* Hero text css starts here */
+.hero-objects {
   z-index: 2;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.hero-text button {
-  background-color: #183d3d;
-  color: white;
-  font-weight: 300;
-  font-size: large;
-  border: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.hero-text button:hover {
-  color: #fffaec;
-  font-weight: 300;
-  font-size: large;
-  border: 2px #183d3d solid;
-  cursor: pointer;
-  background-color: transparent;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 70dvh;
+  width: 80dvw;
 }
 
 .hero-text h1 {
   color: white;
   margin-bottom: -10px;
-  font-size: 5rem;
+  font-size: 4rem;
+  font-family: var(--doza-family);
+  text-transform: capitalize;
 }
 
 .hero-text p {
@@ -346,21 +348,163 @@ header * {
   font-weight: 300;
 }
 
-.hero-text > button {
-  align-self: center;
-  height: 40px;
-  width: 180px;
-  background-color: #183d3d;
+/* Hero buttons */
+.hero-buttons {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+}
+.hero-buttons a {
+  text-decoration: none;
+}
+.hero-buttons button {
+  background-color: var(--brand-color-light);
   color: white;
   font-weight: 300;
   font-size: large;
   border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  width: 10rem;
+  height: 3rem;
 }
-.doza-logo {
+.hero-buttons button:hover {
+  color: #fffaec;
+  font-weight: 300;
+  font-size: large;
+  border: 2px var(--brand-color-light) solid;
+  cursor: pointer;
+  background-color: transparent;
+}
+.hero-buttons .two-button {
+  background-color: transparent;
+  font-family: var(--doza-family);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.hero-buttons .two-button:hover {
+  background-color: gray opacity 0.3;
+  color: white;
+}
+
+/* The welcome message section starts here */
+.welcome {
+  width: 100%;
+  height: 100%;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.welcome-message {
+  width: 65%;
+  height: 40dvh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  border-radius: 40px;
+  padding: 5%;
+}
+.welcome-message span {
+  text-transform: capitalize;
+}
+.welcome-message h2 {
+  font-family: var(--doza-support);
+  font-size: 6rem;
+  font-weight: 700;
+  margin-top: -2rem;
+  align-self: center;
+}
+.welcome-message p {
+  font-family: var(--doza-family);
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+}
+.welcome-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 25%;
+  margin-top: -4rem;
+}
+.welcome-buttons button {
+  background-color: var(--brand-color-light);
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  border: none;
+  margin-top: 20px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  height: 3rem;
+  width: 13rem;
+}
+
+/* Our meetings section starts here */
+.our-meetings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.our-meetings > h2 {
+  align-self: center;
+  font-size: larger;
+}
+.our-meetings h2 {
+  font-family: var(--doza-family);
+  font-size: 3rem;
+}
+.meetings {
+  display: grid;
+  gap: 1%;
+  width: 60%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.sunday-service {
+  background-color: var(--brand-color-dark);
+  border-radius: 20px;
+  color: black;
+  padding: 5%;
+  grid-column: span 2;
+}
+
+.weekly-prayer {
+  background-color: #080808;
+  border-radius: 20px;
+  color: white;
+  padding: 5%;
+}
+.monthly-revival {
+  background-color: #080808;
+  border-radius: 15px;
+  color: white;
+  padding: 5%;
+}
+.meetings button {
+  background-color: black;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  border: none;
+  margin-top: 20px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  height: 3rem;
+  width: 13rem;
+}
+
+/* .doza-logo {
   width: 100px;
 }
 .hero-image img {
   height: 100vh;
   width: 100vw;
   object-fit: cover;
-}
+} */
