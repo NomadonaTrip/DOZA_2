@@ -20,8 +20,8 @@
   --hamburger-margin: 10px;
   --animation-timing: 200ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-  --brand-color-light: #d80e10;
-  --brand-color-dark: #f0a62d;
+  --brand-color-red: #d80e10;
+  --brand-color-orange: #f0a62d;
   --doza-family: "DM Serif Text", serif;
   --doza-support: "roboto-narrow", sans-serif;
 }
@@ -48,12 +48,12 @@ body {
   box-shadow: 0 2px 4px rgba(21, 21, 21, 0.1);
 }
 #call-button button {
-  background-color: var(--brand-color-light);
+  background-color: var(--brand-color-red);
   border: none;
   width: 8rem;
 }
 #call-button button:hover {
-  border: 1px solid var(--brand-color-light);
+  border: 1px solid var(--brand-color-red);
   background-color: transparent;
 }
 .responsive-header > .mobile-call-button {
@@ -333,9 +333,9 @@ header * {
 }
 
 .hero-text h1 {
-  color: white;
+  color: var(--brand-color-red);
   margin-bottom: -10px;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: var(--doza-family);
   text-transform: capitalize;
 }
@@ -344,7 +344,7 @@ header * {
   display: flex;
   justify-content: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 300;
 }
 
@@ -358,7 +358,7 @@ header * {
   text-decoration: none;
 }
 .hero-buttons button {
-  background-color: var(--brand-color-light);
+  background-color: var(--brand-color-red);
   color: white;
   font-weight: 300;
   font-size: large;
@@ -369,14 +369,16 @@ header * {
   width: 10rem;
   height: 3rem;
 }
+
 .hero-buttons button:hover {
   color: #fffaec;
   font-weight: 300;
   font-size: large;
-  border: 2px var(--brand-color-light) solid;
+  border: 2px var(--brand-color-red) solid;
   cursor: pointer;
   background-color: transparent;
 }
+
 .hero-buttons .two-button {
   background-color: transparent;
   font-family: var(--doza-family);
@@ -393,57 +395,167 @@ header * {
 .welcome {
   width: 100%;
   height: 100%;
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.welcome-message {
-  width: 65%;
-  height: 40dvh;
+/* This controls the three grid divs welcoming new members */
+.welcome-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  width: 60%;
+  height: 60dvh;
+}
+.welcome-grid > * {
+  border-radius: 20px;
+  padding: 5%;
+  padding-top: 10%;
+  color: white;
+}
+/* This describes the "New here?" div */
+.new-here {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  border-radius: 40px;
-  padding: 5%;
+  justify-content: center;
+  border-radius: 20px;
+  grid-column: span 2;
+  grid-row: span 2;
+  /* background-color: #151515; */
+  background-image: linear-gradient(#ff9310, #ffd960);
 }
+.new-here img {
+  width: 250px;
+  align-self: center;
+}
+
 .welcome-message span {
   text-transform: capitalize;
 }
 .welcome-message h2 {
-  font-family: var(--doza-support);
-  font-size: 6rem;
-  font-weight: 700;
+  font-family: var(--doza-family);
+  font-size: 4rem;
+  font-weight: 400;
   margin-top: -2rem;
-  align-self: center;
+  margin-bottom: 5rem;
 }
 .welcome-message p {
-  font-family: var(--doza-family);
-  font-size: 1.5rem;
-  text-align: center;
-  font-weight: 300;
+  font-family: var(--doza-support);
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: 100;
 }
+/* These describe the buttons in the "New Here?" div */
 .welcome-buttons {
   display: flex;
-  justify-content: space-evenly;
-  width: 25%;
-  margin-top: -4rem;
+  justify-content: flex-start;
+  width: 100%;
 }
 .welcome-buttons button {
-  background-color: var(--brand-color-light);
+  background-color: black;
   color: white;
   font-weight: 300;
   font-size: 1rem;
   border: none;
   margin-top: 20px;
+  margin-right: 1rem;
   border-radius: 20px;
   text-transform: capitalize;
   height: 3rem;
   width: 13rem;
 }
 
+.locations {
+  grid-column: span 2;
+  background-color: #151515;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.location-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.locations button {
+  background-color: var(--brand-color-red);
+  font-family: var(--doza-family);
+  font-family: var(--doza-support);
+  width: 10rem;
+  height: 3rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 20px;
+  border: none;
+  margin-right: 1rem;
+}
+/* This section describes the latest sermon div */
+.latest-sermon {
+  background-color: var(--brand-color-red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.latest-sermon h2 {
+  font-family: var(--doza-family);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.latest-sermon iframe {
+  border-radius: 5%;
+  margin-bottom: 3rem;
+}
+.latest-sermon button {
+  background-color: black;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  border: none;
+  margin-top: 20px;
+
+  border-radius: 20px;
+  text-transform: capitalize;
+  height: 3rem;
+  width: 13rem;
+}
+/* This describes the Pastor's welcome message div */
+.pastor-welcome {
+  grid-column: span 1;
+  background-color: lightgray;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.pastor-welcome h3 {
+  font-size: 1.3rem;
+  margin-bottom: -0.3rem;
+}
+.pastor-welcome h2 {
+  font-family: var(--doza-family);
+}
+.pastor-welcome img {
+  width: 100%;
+  height: 7rem;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: 15% 10%;
+  margin-bottom: 1rem;
+}
+.pastor-welcome button {
+  background-color: var(--brand-color-red);
+  font-family: var(--doza-support);
+  color: white;
+  width: 6rem;
+  height: 2rem;
+  border: none;
+  border-radius: 10px;
+}
 /* Our meetings section starts here */
 .our-meetings {
   width: 100%;
@@ -451,6 +563,12 @@ header * {
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+}
+.meeting-invitation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
 }
 .our-meetings > h2 {
   align-self: center;
@@ -468,25 +586,38 @@ header * {
   grid-template-rows: 1fr 1fr;
 }
 .sunday-service {
-  background-color: var(--brand-color-dark);
+  background-color: var(--brand-color-orange);
   border-radius: 20px;
   color: black;
   padding: 5%;
   grid-column: span 2;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
-
+.service-details {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.service-map iframe {
+  border-radius: 10%;
+}
 .weekly-prayer {
   background-color: #080808;
   border-radius: 20px;
   color: white;
   padding: 5%;
 }
+
 .monthly-revival {
   background-color: #080808;
   border-radius: 15px;
   color: white;
   padding: 5%;
 }
+
 .meetings button {
   background-color: black;
   color: white;
@@ -494,12 +625,249 @@ header * {
   font-size: 1rem;
   border: none;
   margin-top: 20px;
+  margin-right: 1rem;
   border-radius: 20px;
   text-transform: capitalize;
   height: 3rem;
   width: 13rem;
+  cursor: pointer;
 }
 
+.meetings .sunday-service button {
+  background-color: black;
+}
+
+/* Ministries section */
+.ministries {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0;
+  padding: 0 2rem;
+}
+
+.ministries h2 {
+  font-family: var(--doza-family);
+  font-size: 3rem;
+  color: #151515;
+  margin-bottom: 1rem;
+}
+
+.ministries-intro {
+  font-family: var(--doza-support);
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  max-width: 60%;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.ministries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1%;
+  width: 60%;
+  max-width: 1200px;
+}
+
+.ministry-card {
+  background-color: lightgray;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ministry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ministry-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.ministry-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ministry-card:hover .ministry-image img {
+  transform: scale(1.05);
+}
+
+.ministry-content {
+  padding: 2rem;
+}
+
+.ministry-content h3 {
+  font-family: var(--doza-family);
+  font-size: 1.8rem;
+  color: var(--brand-color-red);
+  margin-bottom: 1rem;
+}
+
+.ministry-content p {
+  font-family: var(--doza-support);
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.ministry-cta {
+  background-color: var(--brand-color-red);
+  color: white;
+  font-family: var(--doza-support);
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.ministry-cta:hover {
+  background-color: transparent;
+  color: var(--brand-color-red);
+  border: 2px solid var(--brand-color-red);
+  transform: translateY(-2px);
+}
+
+/* Special styling for individual ministry cards */
+.kids-church {
+  border-top: 4px solid var(--brand-color-orange);
+}
+
+.lifegroups {
+  border-top: 4px solid var(--brand-color-red);
+}
+
+.prayer-ministry {
+  border-top: 4px solid #151515;
+}
+
+/* Footer section */
+.footer {
+  background-color: #151515;
+  color: white;
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.footer-section h3 {
+  font-family: var(--doza-family);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--brand-color-red);
+}
+
+.footer-section p,
+.footer-section a {
+  font-family: var(--doza-support);
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.footer-section a:hover {
+  color: var(--brand-color-orange);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+  font-family: var(--doza-support);
+  color: #888;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-objects {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .welcome-grid {
+    grid-template-columns: 1fr;
+    width: 90%;
+    height: auto;
+  }
+
+  .new-here,
+  .pastor-welcome,
+  .locations {
+    grid-column: span 1;
+  }
+
+  .meetings {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+  .sunday-service {
+    grid-column: span 1;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+  .welcome-message h2 {
+    font-size: 2.5rem;
+  }
+
+  .our-meetings h2 {
+    font-size: 2rem;
+  }
+
+  .ministries-intro {
+    max-width: 90%;
+  }
+
+  .ministries-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ministries h2 {
+    font-size: 2.5rem;
+  }
+}
 /* .doza-logo {
   width: 100px;
 }
