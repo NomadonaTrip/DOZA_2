@@ -210,6 +210,8 @@ header * {
 }
 .navigation {
   height: 100%;
+  font-family: var(--doza-support);
+  margin: 0;
 }
 .navigation a {
   height: 100%;
@@ -570,6 +572,11 @@ header * {
   align-items: center;
   margin: 3rem 0;
 }
+.meeting-invitation p {
+  font-size: 1.2rem;
+  color: #666;
+  font-family: var(--doza-support);
+}
 .our-meetings > h2 {
   align-self: center;
   font-size: larger;
@@ -583,7 +590,7 @@ header * {
   gap: 1%;
   width: 60%;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
 }
 .sunday-service {
   background-color: var(--brand-color-orange);
@@ -601,8 +608,13 @@ header * {
   flex-direction: column;
   justify-content: space-evenly;
 }
+.service-details p {
+  font-size: 1.4rem;
+  margin-bottom: -2rem;
+}
 .service-map iframe {
   border-radius: 10%;
+  margin-top: 3rem;
 }
 .weekly-prayer {
   background-color: #080808;
@@ -619,9 +631,9 @@ header * {
 }
 
 .meetings button {
-  background-color: black;
-  color: white;
-  font-weight: 300;
+  background-color: white;
+  color: black;
+  font-weight: 500;
   font-size: 1rem;
   border: none;
   margin-top: 20px;
@@ -633,11 +645,13 @@ header * {
   cursor: pointer;
 }
 
-.meetings .sunday-service button {
+.sunday-service button {
   background-color: black;
+  color: white;
 }
+/* Our meetings section ends here */
 
-/* Ministries section */
+/* Ministries section starts here*/
 .ministries {
   width: 100%;
   display: flex;
@@ -755,7 +769,7 @@ header * {
   border-top: 4px solid #151515;
 }
 
-/* Footer section */
+/* Footer section starts here*/
 .footer {
   background-color: #151515;
   color: white;
@@ -868,6 +882,8 @@ header * {
     font-size: 2.5rem;
   }
 }
+
+/* The home page ends here  */
 /* .doza-logo {
   width: 100px;
 }
@@ -876,3 +892,73 @@ header * {
   width: 100vw;
   object-fit: cover;
 } */
+
+/* The locations page begins here */
+
+.locations-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.locations-container {
+  width: 60%;
+  height: 80dvh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 0.5fr;
+  gap: 1rem;
+}
+.locations-container > * {
+  border-radius: 10px;
+  padding: 5%;
+}
+.locations-page h1 {
+  font-family: var(--doza-family);
+  font-size: 3rem;
+}
+.locations-page h2 {
+  font-family: var(--doza-family);
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  width: 50%;
+}
+.locations-page p {
+  font-family: var(--doza-support);
+  font-size: 1.3rem;
+  margin-top: -1rem;
+  color: var(--brand-color-orange);
+}
+.locations-page button {
+  width: 9rem;
+  height: 2.5rem;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  font-family: var(--doza-support);
+  font-size: 1rem;
+  background-color: var(--brand-color-orange);
+  color: white;
+}
+.mississauga {
+  background-image: url(/assets/images/Canada_church.jpg);
+}
+.nigeria {
+  background-image: url(/assets/images/lagos_church.jpg);
+}
+.online {
+  grid-column: span 2;
+  background-color: #666;
+}
+.online-buttons {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--doza-support);
+}
+.online-buttons h4 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--brand-color-orange);
+}

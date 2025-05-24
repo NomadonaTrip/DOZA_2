@@ -57,7 +57,7 @@ class SpecialFooter extends HTMLElement {
       <div class="footer-content">
         <div class="footer-section">
           <h3>Contact Us</h3>
-          <p>123 Revival Street<br>
+          <p>1275 Mississauga Valley Blv.<br>
           Mississauga, ON 12345</p>
           <p>Phone: (555) 123-4567<br>
           Email: info@revivalcentercanada.ca</p>
