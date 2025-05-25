@@ -950,15 +950,181 @@ header * {
 }
 .online {
   grid-column: span 2;
-  background-color: #666;
+  background-color: rgb(27, 27, 27);
 }
 .online-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   font-family: var(--doza-support);
 }
 .online-buttons h4 {
   font-size: 1.4rem;
   font-weight: 300;
-  color: var(--brand-color-orange);
+  text-transform: capitalize;
+  text-align: center;
+  width: 8rem;
+  color: black;
+}
+/* container for the "first-visit?" infographic */
+.steps-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.infographic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.arrow-item {
+  position: relative;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px 0 20px;
+  color: white;
+  font-weight: 500;
+  border-radius: 8px 0 0 8px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  z-index: 2;
+}
+
+.arrow::before {
+  content: "";
+  position: absolute;
+  right: -24px;
+  top: -2px;
+  width: 0;
+  height: 0;
+  border-left: 24px solid rgba(0, 0, 0, 0.1);
+  border-top: 42px solid transparent;
+  border-bottom: 42px solid transparent;
+  z-index: 1;
+}
+
+.arrow-content {
+  flex: 1;
+}
+
+.arrow-number {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+  opacity: 0.9;
+  font-family: var(--doza-family);
+}
+
+.arrow-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+  font-family: var(--doza-family);
+}
+
+.arrow-text {
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.3;
+}
+
+/* Colors for each arrow */
+.arrow-1 {
+  /* background: linear-gradient(135deg, #17a2b8, #138496); */
+  /* background-image: linear-gradient(#ff9310, #ffd960); */
+  background-color: var(--brand-color-orange);
+}
+.arrow-1::after {
+  /* border-left-color: #138496; */
+  border-left-color: var(--brand-color-orange);
+  /* background-image: linear-gradient(#ff9310, #ffd960); */
+}
+
+.arrow-2 {
+  background-color: var(--brand-color-orange);
+}
+.arrow-2::after {
+  border-left-color: var(--brand-color-orange);
+}
+
+.arrow-3 {
+  background-color: var(--brand-color-orange);
+}
+.arrow-3::after {
+  border-left-color: var(--brand-color-orange);
+}
+
+.arrow-4 {
+  background: var(--brand-color-orange);
+}
+.arrow-4::after {
+  border-left-color: var(--brand-color-orange);
+}
+/* media queries for infographic mobile responsiveness */
+@media (max-width: 768px) {
+  .infographic-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .arrow-number {
+    font-size: 36px;
+    margin-right: 15px;
+  }
+
+  .arrow {
+    padding: 0 25px 0 15px;
+  }
+}
+
+/* The about us page begins here */
+
+.about-us {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-image {
+  width: 60%;
+  height: 40dvh;
+  background-image: url(/assets/images/praying_about_us.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.main-text {
+  height: 100%;
+  padding-left: 4%;
+  text-transform: capitalize;
+  color: var(--brand-color-red);
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.main-text h2 {
+  margin-top: -3rem;
 }
