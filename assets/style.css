@@ -1239,7 +1239,7 @@ header * {
   color: white;
 }
 .expressions-grid h2 {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   color: var(--brand-color-orange);
   text-transform: capitalize;
 }
@@ -1254,4 +1254,454 @@ header * {
   font-family: var(--doza-support);
   text-align: center;
   margin-top: -1rem;
+}
+/* THe individual expression grid cells are described here */
+.bible-schools {
+  grid-row: span 2;
+}
+.bible-schools img {
+  width: 15rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.crusades {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+}
+#crusades-text {
+  width: 60%;
+}
+.crusades p {
+  text-align: left;
+}
+#crusade-img img {
+  width: 15rem;
+  border-radius: 10px;
+}
+.seminars {
+  /* placeholder */
+}
+.church-planting {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+}
+.planting-text {
+  width: 60%;
+}
+.church-planting p {
+  text-align: left;
+}
+.planting-img img {
+  width: 15rem;
+  border-radius: 10px;
+}
+.feeding-clothing {
+  grid-row: span 2;
+}
+.feeding-clothing h2 {
+  text-align: center;
+}
+.feeding-clothing img {
+  width: 15rem;
+  border-radius: 10px;
+}
+.feeding-clothing p {
+  margin-top: 1rem;
+}
+.mothers-prayer h2 {
+  text-align: center;
+}
+.homeless-outreach {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+}
+#homeless-text {
+  width: 60%;
+}
+#homeless-text h2 {
+  text-align: left;
+}
+.homeless-outreach p {
+  text-align: left;
+}
+#homeless-img img {
+  width: 15rem;
+  border-radius: 10px;
+}
+#homeless-text,
+#homeless-img {
+  margin-top: -2rem;
+}
+
+.expressions button {
+  margin-top: 2rem;
+  width: 12rem;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--doza-support);
+  font-size: 1.1rem;
+  background-color: black;
+  color: white;
+}
+/* The what we do section ends here */
+
+/* The "What we believe" Section starts here */
+
+.beliefs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.beliefs-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+.beliefs-text h1 {
+  font-family: var(--doza-family);
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+}
+.beliefs-text p {
+  text-align: center;
+  font-family: var(--doza-support);
+  color: #666;
+  font-size: 1.5rem;
+  margin-top: -1rem;
+}
+
+.beliefs-grid {
+  display: grid;
+  width: 60%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1%;
+}
+.beliefs-grid > * {
+  background-color: #080808;
+  padding: 5%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.beliefs-grid h2 {
+  font-size: 1.5rem;
+  color: var(--brand-color-orange);
+  text-transform: capitalize;
+}
+.beliefs-grid h4 {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-family: var(--doza-support);
+  font-weight: 100;
+}
+.beliefs-grid p {
+  font-family: var(--doza-support);
+  font-size: 2rem;
+  text-align: center;
+}
+/* The About Us page ends here */
+
+/* Our Ministries Page begins here */
+
+/* Styles specific to Our Ministries Page - will be built based on homepage CSS */
+
+/* Re-declare CSS variables if not globally available for this snippet context */
+/* In a real setup, these would be in your main CSS file */
+:root {
+  --brand-color-red: #ff0000; /* Placeholder - use your actual red */
+  --brand-color-orange: #ffa500; /* Placeholder - use your actual orange */
+  --doza-family: "Arial", sans-serif; /* Placeholder - use your actual Doza font */
+  --doza-support: "Helvetica", sans-serif; /* Placeholder - use your actual Doza support font */
+  --text-dark: #151515;
+  --text-light: #ffffff;
+  --text-muted: #666;
+  --background-light-gray: lightgray; /* As used in homepage .ministry-card */
+}
+
+body {
+  font-family: var(--doza-support);
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* A neutral light background */
+}
+
+/* Mimic homepage section structure and width */
+.ministries-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ministry-hero-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: var(--text-dark); /* Or a subtle gradient/image */
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 3rem;
+  /* Surprise: Subtle parallax or pattern background could be added */
+}
+
+.ministry-hero-section h1 {
+  font-family: var(--doza-family);
+  font-size: 3rem; /* Consistent with .hero-text h1 or .meetings h2 */
+  color: var(--brand-color-red);
+  margin-bottom: 1rem;
+}
+
+.ministry-hero-section .intro-paragraph {
+  font-size: 1.2rem; /* Consistent with .ministries-intro */
+  max-width: 70%;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.ministries-content-wrapper {
+  width: 70%; /* Similar to .welcome-grid, .meetings width */
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Space between ministry articles */
+}
+
+.ministry-article {
+  background-color: var(
+    --text-light
+  ); /* White background for content clarity */
+  padding: 2.5rem;
+  border-radius: 15px; /* Softer than 20px, or keep 20px for consistency */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  /* Surprise: Subtle entry animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animations for multiple articles */
+.ministry-article:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.ministry-article:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.ministry-article:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.ministry-article h2 {
+  font-family: var(--doza-family);
+  font-size: 2.2rem; /* Slightly smaller than page title H1 */
+  color: var(--brand-color-red); /* Consistent with .ministry-content h3 */
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.ministry-article h2 .ministry-icon {
+  /* For potential leading icon */
+  margin-right: 10px;
+  font-size: 1.8rem; /* Adjust as needed */
+  color: var(--brand-color-orange); /* Or theme color */
+}
+
+.scripture-quote {
+  display: block;
+  font-family: var(--doza-support); /* Or a more distinct serif/italic font */
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #444; /* Slightly muted but clear */
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--brand-color-orange);
+  background-color: #fdfaf4; /* Warm, subtle background */
+  position: relative;
+  /* Surprise: Decorative quote marks */
+}
+.scripture-quote::before {
+  content: "“";
+  font-family: var(--doza-family); /* Or a decorative font */
+  font-size: 2.5rem;
+  color: var(--brand-color-orange);
+  opacity: 0.6;
+  position: absolute;
+  left: -10px; /* Adjust based on quote mark size */
+  top: -5px; /* Adjust */
+}
+.scripture-quote.small {
+  /* For the smaller quote in Mothers' Summit */
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+}
+.scripture-quote.small::before {
+  font-size: 2rem;
+}
+
+.ministry-article p {
+  font-size: 1rem; /* Consistent with .ministry-content p */
+  color: #555; /* Consistent with .ministry-content p */
+  margin-bottom: 1rem;
+}
+
+.ministry-article .ministry-image-placeholder {
+  width: 100%;
+  height: 250px; /* Or aspect ratio based */
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  color: #888;
+  margin: 1.5rem 0;
+  /* Could add a subtle pattern or icon here */
+}
+
+.ministry-article ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.ministry-article ul li {
+  padding-left: 1.8em; /* Space for custom bullet */
+  position: relative;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #555;
+}
+/* Surprise: Custom list bullets */
+.ministry-article ul li::before {
+  content: "✓"; /* Or other icon like '✞', '▶' */
+  position: absolute;
+  left: 0;
+  color: var(--brand-color-red); /* Theme color for bullets */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.ministry-article .ministry-subtitle {
+  /* For "Why Join a Life Group?" */
+  font-family: var(--doza-family);
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.ministry-cta-paragraph {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+/* Prayer Programs Styling */
+.prayer-programs-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Responsive grid */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.prayer-program-card {
+  background-color: #f8f8f8; /* Slightly off-white to differentiate */
+  border: 1px solid #eee;
+  border-left: 5px solid var(--brand-color-orange); /* Accent border */
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.prayer-program-card:hover {
+  /* Surprise: Subtle lift effect */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.prayer-program-card h4 {
+  font-family: var(--doza-family);
+  font-size: 1.3rem;
+  color: var(--text-dark); /* Darker for emphasis within card */
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+.prayer-program-card h4 .emoji-icon {
+  /* For the emojis */
+  margin-right: 0.5rem;
+  font-size: 1.5rem; /* Make emojis a bit larger */
+  /* No specific color needed for emojis, they have their own */
+}
+
+.prayer-program-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Button styles (assuming consistency with homepage) */
+.btn-ministry {
+  background-color: var(--brand-color-red);
+  color: white;
+  font-family: var(
+    --doza-support
+  ); /* Or doza-family if preferred for buttons */
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px; /* Consistent with .ministry-cta */
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease; /* Consistent with .ministry-cta */
+}
+
+.btn-ministry:hover {
+  background-color: transparent;
+  color: var(--brand-color-red);
+  border: 2px solid var(--brand-color-red);
+  transform: translateY(-2px); /* Consistent with .ministry-cta:hover */
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  .ministries-content-wrapper {
+    width: 90%;
+  }
+  .ministry-hero-section h1 {
+    font-size: 2.5rem;
+  }
+  .ministry-hero-section .intro-paragraph {
+    max-width: 90%;
+    font-size: 1.1rem;
+  }
+  .ministry-article h2 {
+    font-size: 1.8rem;
+  }
+  .prayer-programs-grid {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+  }
 }
