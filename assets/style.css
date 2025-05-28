@@ -950,10 +950,10 @@ header * {
   color: white;
 }
 .mississauga {
-  background-image: url(/assets/images/Canada_church.jpg);
+  background-image: url(assets/images/Canada_church.jpg);
 }
 .nigeria {
-  background-image: url(/assets/images/lagos_church.jpg);
+  background-image: url(assets/images/lagos_church.jpg);
 }
 .online {
   grid-column: span 2;
@@ -1115,7 +1115,7 @@ header * {
 .main-image {
   width: 60%;
   height: 40dvh;
-  background-image: url(/assets/images/praying_about_us.jpg);
+  background-image: url(assets/images/praying_about_us.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1653,7 +1653,9 @@ header * {
   font-size: 0.95rem;
   margin-bottom: 1rem;
 }
-
+#mothers-prayer-summit {
+  grid-column: span 2;
+}
 /* Button styles (assuming consistency with homepage) */
 .btn-ministry {
   background-color: var(--brand-color-red);
@@ -1675,7 +1677,7 @@ header * {
 .btn-ministry:hover {
   background-color: transparent;
   color: var(--brand-color-red);
-  border: 2px solid var(--brand-color-red);
+  border: 1px solid var(--brand-color-red);
   transform: translateY(-2px); /* Consistent with .ministry-cta:hover */
 }
 
