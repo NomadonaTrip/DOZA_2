@@ -4,12 +4,12 @@
   box-sizing: border-box;
 }
 /* Placeholder so I know what's possible with this font. Not doing anything on the website */
-.bodoni-moda {
+/* .bodoni-moda {
   font-family: "Bodoni Moda", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-}
+} */
 
 :root {
   --bar-width: 40px;
@@ -24,7 +24,12 @@
   --brand-color-orange: #f0a62d;
   --doza-family: "DM Serif Text", serif;
   --doza-support: "roboto-narrow", sans-serif;
+  --text-dark: #151515;
+  --text-light: #ffffff;
+  --text-muted: #666;
+  --background-light-gray: lightgray; /* As used in homepage .ministry-card */
 }
+
 body {
   margin: 0 auto;
 }
@@ -71,8 +76,8 @@ body {
   font-size: 1rem;
   border: 1px solid #080808;
   border-radius: 10px;
-  background-color: #000000;
-  color: white;
+  background-color: var(--background);
+  color: var(--foreground);
   text-transform: capitalize;
 }
 .hamburger-menu {
@@ -345,7 +350,7 @@ header * {
 .hero-text p {
   display: flex;
   justify-content: center;
-  color: white;
+  font-family: var(--doza-support);
   font-size: 1.3rem;
   font-weight: 300;
 }
@@ -1417,16 +1422,6 @@ header * {
 
 /* Re-declare CSS variables if not globally available for this snippet context */
 /* In a real setup, these would be in your main CSS file */
-:root {
-  --brand-color-red: #ff0000; /* Placeholder - use your actual red */
-  --brand-color-orange: #ffa500; /* Placeholder - use your actual orange */
-  --doza-family: "Arial", sans-serif; /* Placeholder - use your actual Doza font */
-  --doza-support: "Helvetica", sans-serif; /* Placeholder - use your actual Doza support font */
-  --text-dark: #151515;
-  --text-light: #ffffff;
-  --text-muted: #666;
-  --background-light-gray: lightgray; /* As used in homepage .ministry-card */
-}
 
 body {
   font-family: var(--doza-support);
