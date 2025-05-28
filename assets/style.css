@@ -22,6 +22,7 @@
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
   --brand-color-red: #d80e10;
   --brand-color-orange: #f0a62d;
+  --brand-gradient-orange: linear-gradient(#ff9310, #ffd960);
   --doza-family: "DM Serif Text", serif;
   --doza-support: "roboto-narrow", sans-serif;
   --text-dark: #151515;
@@ -353,6 +354,7 @@ header * {
   font-family: var(--doza-support);
   font-size: 1.3rem;
   font-weight: 300;
+  color: var(--foreground);
 }
 
 /* Hero buttons */
@@ -433,7 +435,7 @@ header * {
   grid-column: span 2;
   grid-row: span 2;
   /* background-color: #151515; */
-  background-image: linear-gradient(#ff9310, #ffd960);
+  background-image: var(--brand-gradient-orange);
 }
 .new-here img {
   width: 250px;
@@ -1130,6 +1132,9 @@ header * {
   flex-direction: column;
   justify-content: flex-end;
 }
+.main-text h1 {
+  font-family: var(--doza-family);
+}
 /* The main banner section of the About us page ends here */
 
 /* The Who We Are section of the About Us page starts here */
@@ -1169,23 +1174,24 @@ header * {
   gap: 1%;
 }
 .identity-grid > * {
-  background-color: #080808;
+  background-color: var(--background);
+  color: var(--brand-color-red);
   padding: 5%;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
 }
 .identity-grid h2 {
   font-size: 2.2rem;
-  color: var(--brand-color-orange);
+  color: var(--background);
+  font-family: var(--doza-family);
   text-transform: capitalize;
+  color: var(--foreground);
 }
 .identity-grid h4 {
   font-size: 1.2rem;
   font-style: italic;
-  font-family: var(--doza-support);
   font-weight: 100;
   margin-top: -1rem;
 }
@@ -1196,6 +1202,11 @@ header * {
 }
 .values {
   grid-column: span 2;
+  background-color: var(--brand-color-orange);
+  color: var(--foreground);
+}
+.values h2 {
+  color: var(--background);
 }
 /* The Who we are section of the About Us page ends here */
 
@@ -1245,6 +1256,7 @@ header * {
 }
 .expressions-grid h2 {
   font-size: 1.5rem;
+  font-family: var(--doza-family);
   color: var(--brand-color-orange);
   text-transform: capitalize;
 }
@@ -1285,7 +1297,7 @@ header * {
   border-radius: 10px;
 }
 .seminars {
-  /* placeholder */
+  text-align: center;
 }
 .church-planting {
   grid-column: span 2;
@@ -1418,21 +1430,6 @@ header * {
 
 /* Our Ministries Page begins here */
 
-/* Styles specific to Our Ministries Page - will be built based on homepage CSS */
-
-/* Re-declare CSS variables if not globally available for this snippet context */
-/* In a real setup, these would be in your main CSS file */
-
-body {
-  font-family: var(--doza-support);
-  color: var(--text-dark);
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9; /* A neutral light background */
-}
-
-/* Mimic homepage section structure and width */
 .ministries-page-container {
   width: 100%;
   display: flex;
@@ -1441,8 +1438,9 @@ body {
 }
 
 .ministry-hero-section {
-  width: 100%;
+  width: 63%;
   padding: 4rem 2rem;
+  border-radius: 0px 0px 20px 20px;
   background-color: var(--text-dark); /* Or a subtle gradient/image */
   color: var(--text-light);
   text-align: center;
@@ -1507,7 +1505,7 @@ body {
 .ministry-article h2 {
   font-family: var(--doza-family);
   font-size: 2.2rem; /* Slightly smaller than page title H1 */
-  color: var(--brand-color-red); /* Consistent with .ministry-content h3 */
+  color: var(--brand-color-orange); /* Consistent with .ministry-content h3 */
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
