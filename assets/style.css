@@ -1737,6 +1737,106 @@ header * {
   }
 }
 
+/* Watch Sermon page begins here */
+
+#sermon-viewport {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#sermon-viewport .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+.viewport {
+  border-radius: 4rem;
+  width: 60%;
+  overflow: hidden;
+}
+.sermon-description {
+  width: 60%;
+  align-items: center;
+}
+.sermon-description h2 {
+  font-size: 2rem;
+  color: var(--brand-color-orange);
+  font-family: var(--doza-family);
+}
+.sermon-description p {
+  font-family: var(--doza-support);
+  font-weight: 500;
+  margin-top: -1rem;
+}
+.sermon-description button {
+  background-color: black;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  border: none;
+  margin-top: 20px;
+  margin-right: 1rem;
+  border-radius: 20px;
+  text-transform: capitalize;
+  height: 3rem;
+  width: 13rem;
+}
+.sermon-description button:hover {
+  background: transparent;
+  border: 1px solid black;
+  color: black;
+  transition: var(--animation-timing);
+}
+
+/* The video library section of the Watch Sermon page starts here */
+
+#video-library {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#video-library .container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.library-header {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+.library-header h2 {
+  font-size: 3rem;
+  margin-top: 4rem;
+}
+.video-grid {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  background-color: var(--brand-color-orange);
+  padding: 1rem;
+  border-radius: 2rem;
+}
+.video-grid iframe {
+  border-radius: 10px;
+}
+.video {
+  display: flex;
+  flex-direction: column;
+}
+.video h3 {
+  font-family: var(--doza-support);
+  font-weight: 300;
+  font-size: 1rem;
+  color: white;
+  margin-top: 0rem;
+}
 /* Mobile responsiveness for home page */
 
 /* ===== RESPONSIVE MEDIA QUERIES ===== */
@@ -1781,10 +1881,10 @@ header * {
 
   .welcome-grid {
     width: 90%;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .our-meetings {
-    margin-top: 5rem;
+    margin-top: 27rem;
   }
 
   .meetings {
@@ -1886,6 +1986,13 @@ header * {
   }
 
   /* Meetings Section */
+  .our-meetings {
+    margin-top: -9rem;
+    width: 90%;
+  }
+  .meeting-invitation > p {
+    text-align: center;
+  }
   .meetings {
     width: 90%;
     grid-template-columns: 1fr;
