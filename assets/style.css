@@ -1839,6 +1839,25 @@ header * {
 }
 
 /* The giving page */
+#giving-banner {
+  width: 100%;
+  display: flex;
+}
+#giving-banner img {
+  width: 100dvw;
+  height: 30dvh;
+  object-fit: cover;
+  object-position: top;
+  /* opacity: 0.8; */
+  filter: sepia(50%);
+  z-index: 2;
+}
+#giving-banner h1 {
+  margin-top: -3rem;
+  font-size: 5rem;
+  /* color: white; */
+  z-index: 10;
+}
 
 #giving-note {
   display: flex;
@@ -1865,6 +1884,72 @@ header * {
   color: #666;
   font-size: 1.4rem;
   margin-top: -1rem;
+}
+
+/* the giving options subsection of the giving page */
+
+#giving-options {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+#giving-options .container {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.interac,
+.tithely {
+  width: 15rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#giving-options img {
+  width: 18rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+
+.interac-text,
+.tithely-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6;
+}
+#giving-options h2 {
+  text-align: center;
+}
+#giving-options p {
+  text-align: center;
+  font-family: var(--doza-support);
+  margin-top: -0.6rem;
+}
+
+#giving-options button {
+  background-color: black;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  border: none;
+  margin-top: 20px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  height: 3rem;
+  width: 13rem;
+}
+#giving-options button:hover {
+  background: transparent;
+  border: 1px solid black;
+  color: black;
+  transition: var(--animation-timing);
 }
 
 /* Mobile responsiveness for home page */

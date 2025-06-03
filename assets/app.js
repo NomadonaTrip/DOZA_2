@@ -6,7 +6,7 @@ class SpecialHeader extends HTMLElement {
         <header>
             <div class="inner-header">
                 <div class="logo-container">
-                    <a href="index.html"><img src="assets/images/dozmi-logo-light.png"/></a>
+                    <a href="index.html"><img src="assets/images/dozmi-logo-light_1.png"/></a>
                     
                 </div>
                 
