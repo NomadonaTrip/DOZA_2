@@ -958,10 +958,10 @@ header * {
   color: white;
 }
 .mississauga {
-  background-image: url(/assets/images/Canada_church.jpg);
+  background-image: url(../assets/images/Canada_church.jpg);
 }
 .nigeria {
-  background-image: url(/assets/images/lagos_church.jpg);
+  background-image: url(../assets/images/lagos_church.jpg);
 }
 .online {
   grid-column: span 2;
@@ -1865,7 +1865,7 @@ header * {
   /* object-fit: cover;
   object-position: top; */
   /* opacity: 0.8; */
-  background-image: url("/assets/images/meadow.jpg");
+  background-image: url("../assets/images/meadow.jpg");
   filter: sepia(20%);
   z-index: 2;
 }
@@ -1895,6 +1895,7 @@ header * {
   width: 100%;
   text-transform: capitalize;
   margin-top: 6rem;
+  color: var(--brand-color-orange);
 }
 #giving-note p {
   text-align: center;
@@ -1902,6 +1903,19 @@ header * {
   color: #666;
   font-size: 1.4rem;
   margin-top: -1rem;
+}
+#giving-note i {
+  font-size: 80px;
+  margin-top: 2rem;
+  color: #666;
+  --fa-animation-duration: 3s;
+  --fa-bounce-start-scale-x: 1;
+  --fa-bounce-start-scale-y: 1;
+  --fa-bounce-jump-scale-x: 1;
+  --fa-bounce-jump-scale-y: 1;
+  --fa-bounce-land-scale-x: 1;
+  --fa-bounce-land-scale-y: 1;
+  --fa-bounce-rebound: 0;
 }
 
 /* the giving options subsection of the giving page */
