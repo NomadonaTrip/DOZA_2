@@ -1837,6 +1837,36 @@ header * {
   color: white;
   margin-top: 0rem;
 }
+
+/* The giving page */
+
+#giving-note {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+#giving-note .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+#giving-note h2 {
+  font-family: var(--doza-family);
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+  text-transform: capitalize;
+}
+#giving-note p {
+  text-align: center;
+  font-family: var(--doza-support);
+  color: #666;
+  font-size: 1.4rem;
+  margin-top: -1rem;
+}
+
 /* Mobile responsiveness for home page */
 
 /* ===== RESPONSIVE MEDIA QUERIES ===== */
