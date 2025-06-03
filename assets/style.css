@@ -1842,20 +1842,37 @@ header * {
 #giving-banner {
   width: 100%;
   display: flex;
+  justify-content: center;
 }
-#giving-banner img {
+#giving-banner .container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+/* #giving-banner img {
+  /* width: 100dvw; */
+/* height: 30dvh; */
+/* object-fit: cover;
+  object-position: top; */
+/* opacity: 0.8; */
+/* background-image: url("/assets/images/meadow.jpg"); */
+/* filter: sepia(50%); */
+/* z-index: 2; */
+/*} */
+#giving-banner {
   width: 100dvw;
   height: 30dvh;
-  object-fit: cover;
-  object-position: top;
+  /* object-fit: cover;
+  object-position: top; */
   /* opacity: 0.8; */
-  filter: sepia(50%);
+  background-image: url("/assets/images/meadow.jpg");
+  filter: sepia(20%);
   z-index: 2;
 }
-#giving-banner h1 {
-  margin-top: -3rem;
+#giving-banner .container h1 {
+  margin-top: 9rem;
   font-size: 5rem;
-  /* color: white; */
+  color: white;
   z-index: 10;
 }
 
@@ -1877,6 +1894,7 @@ header * {
   text-align: center;
   width: 100%;
   text-transform: capitalize;
+  margin-top: 6rem;
 }
 #giving-note p {
   text-align: center;
