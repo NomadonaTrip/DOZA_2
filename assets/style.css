@@ -958,10 +958,10 @@ header * {
   color: white;
 }
 .mississauga {
-  background-image: url(../assets/images/Canada_church.jpg);
+  background-image: url(assets/images/Canada_church.jpg);
 }
 .nigeria {
-  background-image: url(../assets/images/lagos_church.jpg);
+  background-image: url(assets/images/lagos_church.jpg);
 }
 .online {
   grid-column: span 2;
