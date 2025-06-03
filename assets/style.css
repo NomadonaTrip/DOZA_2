@@ -936,6 +936,7 @@ header * {
   font-size: 3rem;
   font-weight: 900;
   width: 50%;
+  line-height: 2.5rem;
 }
 .locations-container h3 {
   color: var(--foreground);
@@ -958,10 +959,10 @@ header * {
   color: white;
 }
 .mississauga {
-  background-image: url(images/Canada_church.jpg);
+  background-image: url(./images/Canada_church.jpg);
 }
 .nigeria {
-  background-image: url(images/lagos_church.jpg);
+  background-image: url(./images/lagos_church.jpg);
 }
 .online {
   grid-column: span 2;
@@ -1123,7 +1124,7 @@ header * {
 .main-image {
   width: 60%;
   height: 40dvh;
-  background-image: url(/assets/images/praying_about_us.jpg);
+  background-image: url(./images/praying_about_us.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1865,7 +1866,7 @@ header * {
   /* object-fit: cover;
   object-position: top; */
   /* opacity: 0.8; */
-  background-image: url("../assets/images/meadow.jpg");
+  background-image: url("./images/meadow.jpg");
   filter: sepia(20%);
   z-index: 2;
 }
