@@ -959,7 +959,8 @@ header * {
   color: white;
 }
 .mississauga {
-  background-image: url(./images/Canada_church.jpg);
+  background-image: url(./images/canada_church.webp);
+  background-size: cover;
 }
 .nigeria {
   background-image: url(./images/lagos_church.jpg);
