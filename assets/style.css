@@ -1992,12 +1992,74 @@ header * {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
 }
 #contact-us .container {
   width: 60%;
   display: flex;
   align-items: center;
+}
+#contact-us h1 {
+  font-size: 3rem;
+}
+.contact-message {
+  font-family: var(--doza-support);
+  width: 50%;
+}
+.contact-message h1 {
+  font-family: var(--doza-family);
+}
+.contact-form {
+  width: 50%;
+  margin-top: 7rem;
+}
+.contact-form form {
+  display: flex;
   flex-direction: column;
+  font-family: var(--doza-support);
+}
+.contact-form label {
+  font-weight: 500;
+}
+.contact-form input[type="text"],
+input[type="email"] {
+  width: 50%;
+  height: 2rem;
+  border-radius: 5px;
+  border: 1px solid #b9b9b9;
+}
+#country-code {
+  width: 10%;
+}
+#Subject {
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid #b9b9b9;
+}
+#your-message {
+  width: 50%;
+  border: 1px solid #b9b9b9;
+  border-radius: 5px;
+}
+#submit-button {
+  margin-top: 1rem;
+  background-color: black;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  border: none;
+  margin-top: 20px;
+  margin-right: 1rem;
+  border-radius: 20px;
+  text-transform: capitalize;
+  height: 3rem;
+  width: 8rem;
+}
+#submit-button:hover {
+  background: transparent;
+  border: 1px solid black;
+  color: black;
+  transition: var(--animation-timing);
 }
 
 /* Mobile responsiveness for home page */
