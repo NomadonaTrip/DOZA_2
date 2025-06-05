@@ -16,7 +16,7 @@ class SpecialHeader extends HTMLElement {
                     <a href="about-us.html"><li>About Us</li></a>
                     <a href="our-ministries.html"><li>Our Ministries</li></a>
                     <a href="give.html"><li>Give</li></a>
-                    <a id="call-button" href=""><li><button>Contact Us</button></li></a>
+                    <a id="call-button" href="contact-us.html"><li><button>reach out</button></li></a>
                 </ul>
                 <label class="hamburger-menu">
                     <input type="checkbox">
@@ -57,10 +57,11 @@ class SpecialFooter extends HTMLElement {
       <div class="footer-content">
         <div class="footer-section">
           <h3>Contact Us</h3>
-          <p>1275 Mississauga Valley Blv.<br>
-          Mississauga, ON 12345</p>
-          <p>Phone: (555) 123-4567<br>
-          Email: info@revivalcentercanada.ca</p>
+          <p>1560 Dundas St. W, <br>Mississauga, 
+          Ontario L5C 1E5 <br> (Erindale Presbyterian Church Building). 
+          </p>
+          <p>Phone: +1 647 520 6905.<br>
+          Email: info@dozmi-revivalcenter.ca</p>
         </div>
         <div class="footer-section">
           <h3>Service Times</h3>

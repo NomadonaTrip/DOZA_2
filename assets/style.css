@@ -1986,6 +1986,20 @@ header * {
   transition: var(--animation-timing);
 }
 
+/* Contact us/ reach out page starts here */
+
+#contact-us {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#contact-us .container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* Mobile responsiveness for home page */
 
 /* ===== RESPONSIVE MEDIA QUERIES ===== */
