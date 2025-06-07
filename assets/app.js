@@ -54,6 +54,7 @@ class SpecialFooter extends HTMLElement {
     this.innerHTML = `
     <!-- Footer section -->
     <footer class="footer">
+    <div class = container>
       <div class="footer-content">
         <div class="footer-section">
           <h3>Contact Us</h3>
@@ -73,7 +74,7 @@ class SpecialFooter extends HTMLElement {
           <h3>Connect With Us</h3>
           <p>
             <a href="#">Facebook</a><br>
-            <a href="#">YouTube</a><br>
+            <a href="https://www.youtube.com/@dozmitherevivalcenter" target="_blank" rel="noopener noreferrer"> YouTube</a><br>
             <a href="#">Instagram</a><br>
             <a href="#">Twitter</a>
           </p>
@@ -81,7 +82,8 @@ class SpecialFooter extends HTMLElement {
       </div>
       <div class="footer-bottom">
         <p>&copy; 2025 The Revival Center. All rights reserved.</p>        
-        <p class="credits">Built by Orban Forest Inc.</p>
+        <a href="http://orbanforest.ca" target="_blank" rel="noopener noreferrer" class="credits">Built by Orban Forest Inc.</a>
+      </div>
       </div>
     </footer>
     `;
