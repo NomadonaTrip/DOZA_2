@@ -1,0 +1,1367 @@
+:root {
+  --bar-width: 40px;
+  --bar-height: 4px;
+  --foreground: white;
+  --background: black;
+  --hamburger-gap: 6px;
+  --hamburger-margin: 10px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  /* --brand-color-red: #d80e10; */
+  --brand-color-red: #f0a62d;
+  --brand-color-orange: #f0a62d;
+  --brand-gradient-orange: linear-gradient(#ff9310, #ffd960);
+  --doza-family: "DM Serif Text", serif;
+  --doza-support: "roboto-narrow", sans-serif;
+  --text-dark: #151515;
+  --text-light: #ffffff;
+  --text-muted: #666;
+  --background-light-gray: lightgray; /* As used in homepage .ministry-card */
+}
+
+body {
+  margin: 0 auto;
+  line-height: 1.6rem;
+}
+.responsive-header {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  margin-top: rem;
+  z-index: 20;
+  background-color: rgba(21, 21, 21, 1); /* Semi-transparent by default */
+  transition: background-color 0.3s ease;
+}
+.responsive-header.sticking {
+  background-color: rgba(21, 21, 21, 1); /* Fully opaque when sticky */
+  /* Add any other styles you want when sticky */
+  box-shadow: 0 2px 4px rgba(21, 21, 21, 0.1);
+}
+#call-button button {
+  background-color: var(--brand-color-red);
+  border: none;
+  width: 8rem;
+}
+#call-button button:hover {
+  border: 1px solid var(--brand-color-red);
+  background-color: transparent;
+}
+.responsive-header > .mobile-call-button {
+  align-items: center;
+}
+.mobile-call-button {
+  display: none;
+  top: var(--hamburger-margin);
+  left: 50%;
+  z-index: 2;
+}
+.mobile-call-button button {
+  height: 40px;
+  width: 100px;
+  font-size: 1rem;
+  border: 1px solid var(--brand-color-orange);
+  border-radius: 10px;
+  background-color: var(--brand-color-orange);
+  color: var(--foreground);
+  text-transform: capitalize;
+}
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  display: none;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  top: var(--hamburger-margin);
+  left: var(--hamburger-margin);
+  z-index: 45;
+}
+.hamburger-menu:has(input:checked) {
+  --foreground: black;
+  --background: white;
+}
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  padding: 0;
+  margin: 0;
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+  z-index: 10;
+}
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+  color: #050505;
+}
+.sidebar {
+  display: none;
+  transition: translate var(--animation-timing);
+  translate: 0px -100%;
+  padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+  background-color: var(--foreground);
+  color: var(--background);
+  min-width: 12rem;
+  min-height: 30vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 0;
+  z-index: 35;
+}
+.sidebar nav {
+  padding: 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  width: 100%;
+}
+.sidebar a {
+  text-decoration: none;
+  color: #151515;
+}
+.sidebar a:hover {
+  background-color: #050505;
+  color: white;
+  padding: 5%;
+}
+.hamburger-menu:has(input:checked) + .sidebar {
+  translate: 0;
+}
+/* css for the primary header starts here */
+header {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 60px;
+}
+header * {
+  list-style: none;
+}
+.inner-header {
+  width: 92%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.logo-container {
+  height: 100%;
+  display: flex;
+}
+.logo-container * {
+  align-items: center;
+}
+.logo-container img {
+  height: 40%;
+  width: 30%;
+}
+.logo-container a {
+  align-self: center;
+  text-decoration: none;
+}
+.logo-container p {
+  height: 100%;
+  color: white;
+  display: flex;
+}
+.navigation {
+  height: 100%;
+  width: 70%;
+  font-family: var(--doza-support);
+  margin: 0;
+}
+.navigation a {
+  height: 100%;
+  display: table;
+  align-items: center;
+  padding: 0px 20px;
+  float: left;
+  text-decoration: none;
+  color: white;
+}
+.navigation a:last-child {
+  padding-right: 0px;
+}
+.navigation a li {
+  display: table-cell;
+  vertical-align: middle;
+}
+.navigation button {
+  height: 40px;
+  width: 80px;
+  font-size: 1rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  text-transform: capitalize;
+}
+.header-hr {
+  margin-top: -0.1rem;
+  width: 100%;
+}
+/* Header mobile responsiveness */
+
+@media (max-width: 1026px) {
+  .navigation {
+    display: none;
+  }
+  .navigation button {
+    display: block;
+  }
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+  }
+  /* Show mobile call button */
+  .mobile-call-button {
+    display: flex;
+  }
+  .header-hr {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  /* Adjust sidebar position for right-side hamburger */
+  .sidebar {
+    right: 0;
+    left: auto;
+    display: flex;
+  }
+}
+
+/* The about us page begins here */
+
+.about-us {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-image {
+  width: 60%;
+  height: 40dvh;
+  background-image: url(./images/praying_about_us.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.main-text {
+  height: 100%;
+  padding-left: 4%;
+  text-transform: capitalize;
+  color: var(--brand-color-red);
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.main-text h1 {
+  font-family: var(--doza-family);
+}
+.identity {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.identity-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+.identity-text h1 {
+  font-family: var(--doza-family);
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+}
+.identity-text p {
+  text-align: center;
+  font-family: var(--doza-support);
+  color: #666;
+  font-size: 1.5rem;
+  margin-top: -1rem;
+}
+.identity-text span {
+  text-transform: capitalize;
+}
+.identity-grid {
+  display: grid;
+  width: 60%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1%;
+}
+.identity-grid > * {
+  background-color: var(--background);
+  color: var(--brand-color-red);
+  padding: 5%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.identity-grid h2 {
+  font-size: 2.2rem;
+  color: var(--background);
+  font-family: var(--doza-family);
+  text-transform: capitalize;
+  color: var(--foreground);
+}
+.identity-grid h4 {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 100;
+  margin-top: -1rem;
+}
+.identity-grid p {
+  font-family: var(--doza-support);
+  text-align: center;
+  margin-top: -1rem;
+}
+.values {
+  grid-column: span 2;
+  background-color: var(--brand-color-orange);
+  color: var(--foreground);
+}
+.values h2 {
+  color: var(--background);
+}
+/* The Who we are section of the About Us page ends here */
+
+.expressions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.expressions-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+.expressions-text h1 {
+  font-family: var(--doza-family);
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+}
+.expressions-text p {
+  text-align: center;
+  font-family: var(--doza-support);
+  color: #666;
+  font-size: 1.5rem;
+  margin-top: -1rem;
+}
+.expressions-text span {
+  text-transform: capitalize;
+}
+.expressions-grid {
+  display: grid;
+  width: 60%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1%;
+}
+.expressions-grid > * {
+  background-color: #080808;
+  padding: 5%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.expressions-grid h2 {
+  font-size: 1.5rem;
+  font-family: var(--doza-family);
+  color: var(--brand-color-orange);
+  text-transform: capitalize;
+}
+.expressions-grid h4 {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-family: var(--doza-support);
+  font-weight: 100;
+  margin-top: -1rem;
+}
+.expressions-grid p {
+  font-family: var(--doza-support);
+  text-align: center;
+  margin-top: -1rem;
+}
+/* THe individual expression grid cells are described here */
+.bible-schools {
+  grid-row: span 2;
+}
+.bible-schools img {
+  width: 15rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.crusades {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+}
+#crusades-text {
+  width: 60%;
+}
+.crusades p {
+  text-align: left;
+}
+#crusade-img img {
+  width: 15rem;
+  border-radius: 10px;
+}
+.seminars {
+  text-align: center;
+}
+.church-planting {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+}
+.planting-text {
+  width: 60%;
+}
+.church-planting p {
+  text-align: left;
+}
+.planting-img img {
+  width: 15rem;
+  border-radius: 10px;
+}
+.feeding-clothing {
+  grid-row: span 2;
+}
+.feeding-clothing h2 {
+  text-align: center;
+}
+.feeding-clothing img {
+  width: 15rem;
+  border-radius: 10px;
+}
+.feeding-clothing p {
+  margin-top: 1rem;
+}
+.mothers-prayer h2 {
+  text-align: center;
+}
+.homeless-outreach {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+}
+#homeless-text {
+  width: 60%;
+}
+#homeless-text h2 {
+  text-align: left;
+}
+.homeless-outreach p {
+  text-align: left;
+}
+#homeless-img img {
+  width: 15rem;
+  border-radius: 10px;
+}
+#homeless-text,
+#homeless-img {
+  margin-top: -2rem;
+}
+
+.expressions button {
+  margin-top: 2rem;
+  width: 12rem;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--doza-support);
+  font-size: 1.1rem;
+  background-color: black;
+  color: white;
+}
+/* The what we do section ends here */
+
+/* The "What we believe" Section starts here */
+
+.beliefs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.beliefs-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+.beliefs-text h1 {
+  font-family: var(--doza-family);
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+}
+.beliefs-text p {
+  text-align: center;
+  font-family: var(--doza-support);
+  color: #666;
+  font-size: 1.4rem;
+  margin-top: -1rem;
+}
+
+.beliefs-grid {
+  display: grid;
+  width: 60%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1%;
+}
+.beliefs-grid > * {
+  background-color: #080808;
+  padding: 2%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.beliefs-grid h2 {
+  font-size: 1.5rem;
+  color: var(--brand-color-orange);
+  text-transform: capitalize;
+}
+.beliefs-grid h4 {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-family: var(--doza-support);
+  font-weight: 100;
+}
+.beliefs-grid p {
+  font-family: var(--doza-support);
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.beliefs button {
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  margin-top: 20px;
+  margin-right: 1rem;
+  border-radius: 20px;
+  text-transform: capitalize;
+  height: 3rem;
+  width: 13rem;
+  cursor: pointer;
+}
+/* Base Improvements for Cross-Platform Consistency */
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced Base Styles */
+.identity,
+.expressions,
+.beliefs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: clamp(1rem, 4vw, 3rem) 0;
+}
+
+/* Improved Typography Base */
+.identity-text h1,
+.expressions-text h1,
+.beliefs-text h1 {
+  font-family: var(--doza-family);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+  width: 100%;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.identity-text p,
+.expressions-text p,
+.beliefs-text p {
+  text-align: center;
+  font-family: var(--doza-support);
+  color: #666;
+  font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+/* Enhanced Grid Systems */
+.identity-grid,
+.expressions-grid,
+.beliefs-grid {
+  width: min(90%, 1200px);
+  margin: 2rem auto 0;
+}
+
+/* Improved Interactive Elements */
+.expressions button,
+.beliefs button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: var(--doza-support);
+  text-transform: capitalize;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  min-height: 44px; /* iOS accessibility requirement */
+  min-width: 44px;
+}
+
+.expressions button:hover,
+.beliefs button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.expressions button:active,
+.beliefs button:active {
+  transform: translateY(0);
+}
+
+/* Image Optimization */
+.bible-schools img,
+#crusade-img img,
+.planting-img img,
+.feeding-clothing img,
+#homeless-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* ==============================================
+   DEVICE-SPECIFIC MEDIA QUERIES
+   ============================================== */
+
+/* Large Desktops & 4K Displays: 1921px+ */
+@media screen and (min-width: 1921px) {
+  .identity-text,
+  .expressions-text,
+  .beliefs-text {
+    width: min(60%, 1000px);
+  }
+
+  .identity-grid,
+  .expressions-grid,
+  .beliefs-grid {
+    width: min(60%, 1200px);
+  }
+
+  .identity-text h1,
+  .expressions-text h1,
+  .beliefs-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .identity-text p,
+  .expressions-text p,
+  .beliefs-text p {
+    font-size: 1.8rem;
+  }
+}
+
+/* Standard Laptops: 1280px - 1920px */
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+  .identity-text,
+  .expressions-text,
+  .beliefs-text {
+    width: min(65%, 900px);
+  }
+
+  .identity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+
+  .expressions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: clamp(1rem, 1.5vw, 1.5rem);
+  }
+
+  .beliefs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 1.5vw, 1.5rem);
+  }
+
+  .identity-grid > *,
+  .expressions-grid > *,
+  .beliefs-grid > * {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .values {
+    grid-column: span 2;
+  }
+
+  .bible-schools {
+    grid-row: span 2;
+  }
+
+  .crusades,
+  .church-planting,
+  .homeless-outreach {
+    grid-column: span 2;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .feeding-clothing {
+    grid-row: span 2;
+  }
+
+  #crusades-text,
+  .planting-text,
+  #homeless-text {
+    flex: 1;
+    padding-right: 1rem;
+  }
+
+  #crusade-img,
+  .planting-img,
+  #homeless-img {
+    flex-shrink: 0;
+  }
+}
+
+/* Tablets & Small Laptops: 768px - 1279px */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .identity-text,
+  .expressions-text,
+  .beliefs-text {
+    width: min(85%, 700px);
+  }
+
+  .identity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: clamp(1rem, 2.5vw, 2rem);
+  }
+
+  .expressions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .beliefs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .identity-grid > *,
+  .expressions-grid > *,
+  .beliefs-grid > * {
+    padding: clamp(1.5rem, 4vw, 2rem);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .values {
+    grid-column: span 2;
+  }
+
+  .crusades,
+  .church-planting,
+  .homeless-outreach {
+    grid-column: span 2;
+  }
+
+  .expressions-grid h2 {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+  }
+
+  .expressions-grid p,
+  .beliefs-grid p {
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+  }
+
+  .bible-schools img,
+  #crusade-img img,
+  .planting-img img,
+  .feeding-clothing img,
+  #homeless-img img {
+    width: clamp(8rem, 25vw, 12rem);
+    margin: 1rem 0;
+  }
+
+  .expressions button {
+    width: clamp(8rem, 25vw, 12rem);
+    height: clamp(2.5rem, 6vw, 3rem);
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    background-color: var(--brand-color-orange, #ff6b35);
+    color: white;
+    border-radius: 25px;
+    margin-top: 1.5rem;
+  }
+
+  .beliefs button {
+    width: clamp(7rem, 20vw, 10rem);
+    height: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    margin: 0.5rem 0.25rem;
+    border-radius: 20px;
+  }
+}
+
+/* Large Mobile Devices: 480px - 767px */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .identity,
+  .expressions,
+  .beliefs {
+    padding: clamp(1.5rem, 5vw, 2.5rem) 0;
+  }
+
+  .identity-text,
+  .expressions-text,
+  .beliefs-text {
+    width: min(92%, 500px);
+    padding: 0 1rem;
+  }
+
+  .identity-grid,
+  .expressions-grid,
+  .beliefs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 4vw, 1.5rem);
+    width: min(92%, 500px);
+  }
+
+  .identity-grid > *,
+  .expressions-grid > *,
+  .beliefs-grid > * {
+    padding: clamp(1.2rem, 5vw, 2rem);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .identity-grid h2,
+  .expressions-grid h2 {
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .identity-grid h4 {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    margin-top: -0.5rem;
+  }
+
+  .identity-grid p,
+  .expressions-grid p,
+  .beliefs-grid p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+    line-height: 1.5;
+  }
+
+  .bible-schools img,
+  #crusade-img img,
+  .planting-img img,
+  .feeding-clothing img,
+  #homeless-img img {
+    width: clamp(6rem, 30vw, 10rem);
+    margin: 0.75rem 0;
+  }
+
+  .expressions button {
+    width: clamp(8rem, 40vw, 12rem);
+    height: 3rem;
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    background-color: var(--brand-color-orange, #ff6b35);
+    color: white;
+    border-radius: 25px;
+    margin-top: 1.5rem;
+  }
+
+  .beliefs button {
+    width: clamp(7rem, 35vw, 9rem);
+    height: 2.5rem;
+    font-size: clamp(0.75rem, 3vw, 0.9rem);
+    margin: 0.4rem 0.2rem;
+    border-radius: 15px;
+  }
+
+  .belief-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Standard Mobile Devices: 360px - 479px */
+@media screen and (min-width: 360px) and (max-width: 479px) {
+  .identity,
+  .expressions,
+  .beliefs {
+    padding: clamp(1rem, 4vw, 2rem) 0;
+  }
+
+  .identity-text,
+  .expressions-text,
+  .beliefs-text {
+    width: min(95%, 400px);
+    padding: 0 0.75rem;
+  }
+
+  .identity-grid,
+  .expressions-grid,
+  .beliefs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(0.75rem, 3vw, 1.25rem);
+    width: min(95%, 400px);
+  }
+
+  .identity-grid > *,
+  .expressions-grid > *,
+  .beliefs-grid > * {
+    padding: clamp(1rem, 4vw, 1.5rem);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .identity-grid h2,
+  .expressions-grid h2 {
+    font-size: clamp(1rem, 4.5vw, 1.3rem);
+    margin-bottom: 0.4rem;
+  }
+
+  .identity-grid h4 {
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+    margin-top: -0.4rem;
+  }
+
+  .identity-grid p,
+  .expressions-grid p,
+  .beliefs-grid p {
+    font-size: clamp(0.8rem, 3.5vw, 0.95rem);
+    line-height: 1.4;
+  }
+
+  .bible-schools img,
+  #crusade-img img,
+  .planting-img img,
+  .feeding-clothing img,
+  #homeless-img img {
+    width: clamp(5rem, 25vw, 8rem);
+    margin: 0.5rem 0;
+  }
+
+  .expressions button {
+    width: clamp(7rem, 50vw, 10rem);
+    height: 2.75rem;
+    font-size: clamp(0.85rem, 4vw, 1rem);
+    background-color: var(--brand-color-orange, #ff6b35);
+    color: white;
+    border-radius: 20px;
+    margin-top: 1.25rem;
+  }
+
+  .beliefs button {
+    width: clamp(6rem, 40vw, 8rem);
+    height: 2.25rem;
+    font-size: clamp(0.7rem, 3.5vw, 0.85rem);
+    margin: 0.3rem 0.15rem;
+    border-radius: 12px;
+  }
+
+  .belief-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+}
+
+/* Small Mobile Devices: 300px - 359px */
+@media screen and (min-width: 300px) and (max-width: 359px) {
+  .identity,
+  .expressions,
+  .beliefs {
+    padding: clamp(1rem, 5vw, 1.5rem) 0;
+  }
+
+  .identity-text,
+  .expressions-text,
+  .beliefs-text {
+    width: 98%;
+    padding: 0 0.5rem;
+  }
+
+  .identity-text h1,
+  .expressions-text h1,
+  .beliefs-text h1 {
+    font-size: clamp(1.2rem, 6vw, 1.6rem);
+    line-height: 1.1;
+  }
+
+  .identity-text p,
+  .expressions-text p,
+  .beliefs-text p {
+    font-size: clamp(0.75rem, 4vw, 0.9rem);
+    line-height: 1.4;
+  }
+
+  .identity-grid,
+  .expressions-grid,
+  .beliefs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(0.5rem, 3vw, 1rem);
+    width: 98%;
+  }
+
+  .identity-grid > *,
+  .expressions-grid > *,
+  .beliefs-grid > * {
+    padding: clamp(0.8rem, 4vw, 1.2rem);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .identity-grid h2,
+  .expressions-grid h2 {
+    font-size: clamp(0.9rem, 5vw, 1.2rem);
+    margin-bottom: 0.3rem;
+  }
+
+  .identity-grid h4 {
+    font-size: clamp(0.75rem, 4vw, 0.9rem);
+    margin-top: -0.3rem;
+  }
+
+  .identity-grid p,
+  .expressions-grid p,
+  .beliefs-grid p {
+    font-size: clamp(0.7rem, 4vw, 0.85rem);
+    line-height: 1.3;
+  }
+
+  .bible-schools img,
+  #crusade-img img,
+  .planting-img img,
+  .feeding-clothing img,
+  #homeless-img img {
+    width: clamp(4rem, 30vw, 6rem);
+    margin: 0.4rem 0;
+    border-radius: 6px;
+  }
+
+  .expressions button {
+    width: clamp(6rem, 60vw, 8rem);
+    height: 2.5rem;
+    font-size: clamp(0.75rem, 4.5vw, 0.9rem);
+    background-color: var(--brand-color-orange, #ff6b35);
+    color: white;
+    border-radius: 15px;
+    margin-top: 1rem;
+  }
+
+  .beliefs button {
+    width: clamp(5rem, 45vw, 7rem);
+    height: 2rem;
+    font-size: clamp(0.6rem, 4vw, 0.75rem);
+    margin: 0.25rem 0.1rem;
+    border-radius: 10px;
+  }
+
+  .belief-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+}
+
+/* Wearable Devices & Ultra-Small Screens: 150px - 299px */
+@media screen and (min-width: 150px) and (max-width: 299px) {
+  .identity,
+  .expressions,
+  .beliefs {
+    padding: clamp(0.5rem, 4vw, 1rem) 0;
+  }
+
+  .identity-text,
+  .expressions-text,
+  .beliefs-text {
+    width: 100%;
+    padding: 0 0.25rem;
+  }
+
+  .identity-text h1,
+  .expressions-text h1,
+  .beliefs-text h1 {
+    font-size: clamp(0.9rem, 8vw, 1.3rem);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+
+  .identity-text p,
+  .expressions-text p,
+  .beliefs-text p {
+    font-size: clamp(0.6rem, 6vw, 0.8rem);
+    line-height: 1.3;
+  }
+
+  .identity-grid,
+  .expressions-grid,
+  .beliefs-grid {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.25rem, 2vw, 0.5rem);
+    width: 100%;
+  }
+
+  .identity-grid > *,
+  .expressions-grid > *,
+  .beliefs-grid > * {
+    padding: clamp(0.5rem, 3vw, 0.8rem);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 0.125rem;
+  }
+
+  .identity-grid h2,
+  .expressions-grid h2 {
+    font-size: clamp(0.7rem, 6vw, 1rem);
+    margin-bottom: 0.2rem;
+  }
+
+  .identity-grid h4 {
+    font-size: clamp(0.6rem, 5vw, 0.8rem);
+    margin-top: -0.2rem;
+  }
+
+  .identity-grid p,
+  .expressions-grid p,
+  .beliefs-grid p {
+    font-size: clamp(0.55rem, 5vw, 0.7rem);
+    line-height: 1.2;
+  }
+
+  .bible-schools img,
+  #crusade-img img,
+  .planting-img img,
+  .feeding-clothing img,
+  #homeless-img img {
+    width: clamp(2.5rem, 40vw, 4rem);
+    height: auto;
+    margin: 0.2rem 0;
+    border-radius: 4px;
+  }
+
+  .expressions button {
+    width: clamp(4rem, 80vw, 6rem);
+    height: clamp(1.5rem, 8vw, 2rem);
+    font-size: clamp(0.5rem, 6vw, 0.7rem);
+    background-color: var(--brand-color-orange, #ff6b35);
+    color: white;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }
+
+  .beliefs button {
+    width: clamp(3.5rem, 70vw, 5rem);
+    height: clamp(1.25rem, 7vw, 1.75rem);
+    font-size: clamp(0.45rem, 5vw, 0.65rem);
+    margin: 0.15rem 0.05rem;
+    border-radius: 6px;
+  }
+
+  .belief-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+}
+
+/* ==============================================
+   CROSS-PLATFORM ENHANCEMENTS
+   ============================================== */
+
+/* iOS Safari Specific Fixes */
+@supports (-webkit-overflow-scrolling: touch) {
+  .identity-grid > *,
+  .expressions-grid > *,
+  .beliefs-grid > * {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  .expressions button,
+  .beliefs button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+/* Android Chrome Specific Optimizations */
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .bible-schools img,
+  #crusade-img img,
+  .planting-img img,
+  .feeding-clothing img,
+  #homeless-img img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* High DPI Display Optimizations */
+@media screen and (min-resolution: 2dppx) {
+  .identity-text h1,
+  .expressions-text h1,
+  .beliefs-text h1 {
+    font-weight: 400;
+  }
+
+  .expressions button,
+  .beliefs button {
+    border: 0.5px solid transparent;
+  }
+}
+
+/* Landscape Orientation Optimizations */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  .identity,
+  .expressions,
+  .beliefs {
+    padding: clamp(0.5rem, 2vh, 1.5rem) 0;
+  }
+
+  .identity-text h1,
+  .expressions-text h1,
+  .beliefs-text h1 {
+    font-size: clamp(1.2rem, 4vh, 2.5rem);
+  }
+
+  .identity-grid > *,
+  .expressions-grid > *,
+  .beliefs-grid > * {
+    padding: clamp(0.75rem, 2vh, 1.5rem);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .expressions button,
+  .beliefs button {
+    display: none;
+  }
+
+  .bible-schools img,
+  #crusade-img img,
+  .planting-img img,
+  .feeding-clothing img,
+  #homeless-img img {
+    max-width: 3cm;
+    page-break-inside: avoid;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .expressions button,
+  .beliefs button,
+  .bible-schools img,
+  #crusade-img img,
+  .planting-img img,
+  .feeding-clothing img,
+  #homeless-img img {
+    transition: none;
+  }
+
+  .expressions button:hover,
+  .beliefs button:hover {
+    transform: none;
+  }
+}

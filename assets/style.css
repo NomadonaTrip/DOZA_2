@@ -30,6 +30,11 @@
   --text-light: #ffffff;
   --text-muted: #666;
   --background-light-gray: lightgray; /* As used in homepage .ministry-card */
+  --container-width-xl: 60%;
+  --container-width-lg: 80%;
+  --container-width-md: 85%;
+  --container-width-sm: 90%;
+  --container-width-xs: 95%;
 }
 
 body {
@@ -405,15 +410,20 @@ header * {
 }
 
 /* The welcome message section starts here */
-.welcome {
+#welcome {
   width: 100%;
   height: 100%;
   margin-top: 2rem;
-  margin-bottom: 8rem;
+  margin-bottom: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+#welcome .container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
 }
 /* This controls the three grid divs welcoming new members */
 .welcome-grid {
@@ -421,8 +431,9 @@ header * {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
-  width: 60%;
+  width: 100%;
   height: 60dvh;
+  margin-top: 1%;
 }
 .welcome-grid > * {
   border-radius: 20px;
@@ -445,7 +456,9 @@ header * {
   width: 250px;
   align-self: center;
 }
-
+.welcome-message {
+  height: 100%;
+}
 .welcome-message span {
   text-transform: capitalize;
 }
@@ -453,8 +466,7 @@ header * {
   font-family: var(--doza-family);
   font-size: 4rem;
   font-weight: 400;
-  margin-top: -2rem;
-  margin-bottom: 5rem;
+  /* margin-top: -2rem; */
 }
 .welcome-message p {
   font-family: var(--doza-support);
@@ -570,38 +582,49 @@ header * {
   border-radius: 10px;
 }
 /* Our meetings section starts here */
-.our-meetings {
+#our-meetings {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  /* margin-top: 10rem; */
 }
-.meeting-invitation {
+#our-meetings .container {
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3rem 0;
+}
+#our-meetings .meeting-invitation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 11rem;
+  /* margin: 3rem 0; */
 }
 .meeting-invitation p {
   font-size: 1.2rem;
   color: #666;
   font-family: var(--doza-support);
 }
-.our-meetings > h2 {
+#our-meetings > h2 {
   align-self: center;
-  font-size: larger;
 }
-.our-meetings h2 {
+#our-meetings h2 {
   font-family: var(--doza-family);
   font-size: 3rem;
 }
 .meetings {
   display: grid;
   gap: 1%;
-  width: 60%;
+  width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 1fr;
+}
+.service-location {
+  display: flex;
+  flex-direction: column;
 }
 .sunday-service {
   background-color: var(--brand-color-orange);
@@ -664,16 +687,20 @@ header * {
 /* Our meetings section ends here */
 
 /* Ministries section starts here*/
-.ministries {
+#ministries {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 4rem 0;
-  padding: 0 2rem;
 }
-
-.ministries h2 {
+#ministries .container {
+  width: var(--container-width-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#ministries h2 {
   font-family: var(--doza-family);
   font-size: 3rem;
   color: #151515;
@@ -685,17 +712,15 @@ header * {
   font-size: 1.2rem;
   color: #666;
   text-align: center;
-  max-width: 60%;
   margin-bottom: 3rem;
   line-height: 1.6;
 }
 
 .ministries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1%;
-  width: 60%;
-  max-width: 1200px;
+  width: 100%;
 }
 
 .ministry-card {
@@ -704,6 +729,7 @@ header * {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
 }
 
 .ministry-card:hover {
@@ -890,7 +916,7 @@ header * {
     font-size: 2.5rem;
   }
 
-  .our-meetings h2 {
+  #our-meetings h2 {
     font-size: 2rem;
   }
 
@@ -903,7 +929,7 @@ header * {
     gap: 1.5rem;
   }
 
-  .ministries h2 {
+  #ministries h2 {
     font-size: 2.5rem;
   }
 }
@@ -1159,6 +1185,7 @@ header * {
 .main-text h1 {
   font-family: var(--doza-family);
 }
+/* ====================About Us=============================
 /* The main banner section of the About us page ends here */
 
 /* The Who We Are section of the About Us page starts here */
@@ -2087,28 +2114,43 @@ input[type="email"] {
 /* ===== RESPONSIVE MEDIA QUERIES ===== */
 
 /* Desktop monitors - 1280px to 1600px */
-@media screen and (min-width: 1281px) and (max-width: 1600px) {
+@media screen and (min-width: 1280px) and (max-width: 1600px) {
   .hero-image {
     width: 80%;
   }
   .hero-objects {
     width: 70dvw;
   }
-
-  .welcome-grid {
+  #welcome .container {
     width: 80%;
+    justify-content: center;
+    padding: 0;
+  }
+  #welcome .new-here {
+    justify-content: space-evenly;
+  }
+  #welcome .welcome-grid {
+    width: 100%;
     /* max-width: 1400px; */
   }
-  .our-meetings {
-    margin-top: 18%;
+  #our-meetings {
+  }
+  #our-meetings .container {
+    width: var(--container-width-lg);
+  }
+  #our-meetings .meeting-invitation {
+    margin-top: 13%;
   }
   .meetings {
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
   }
 
+  #ministries .container {
+    width: var(--container-width-lg);
+  }
   .ministries-grid {
-    width: 80%;
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
     padding: 0;
   }
@@ -2164,36 +2206,67 @@ input[type="email"] {
 }
 
 /* Medium Desktop - 1280px */
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 921px) and (max-width: 1279px) {
+  .inner-header {
+    width: 85%;
+  }
+  .hero-image {
+    width: var(--container-width-md);
+  }
   .hero-objects {
-    width: 85dvw;
+    width: 100%;
+    padding: 0rem 2rem;
+    justify-content: space-between;
   }
 
   .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
   }
-
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+  .hero-buttons {
+    width: 37%;
+  }
+  #welcome .container {
+    width: var(--container-width-md);
+    padding: 0px;
+  }
   .welcome-grid {
-    width: 90%;
+    width: 100%;
     grid-template-columns: 1fr 1fr;
   }
-  .our-meetings {
-    margin-top: 27rem;
-  }
-
-  .meetings {
-    width: 90%;
-  }
-
-  .ministries-grid {
-    width: 90%;
-    grid-template-columns: repeat(1fr 1fr);
-  }
-  #prayer-home {
+  .new-here {
     grid-column: span 2;
+    height: 80dvh;
+  }
+  .welcome-message {
+    height: 100%;
+  }
+  #our-meetings {
+    margin-top: 33rem;
+  }
+  #our-meetings .container {
+    width: 90%;
+  }
+  #our-meetings .meeting-invitation {
+    margin-top: 40%;
+  }
+  .meetings {
+    width: 100%;
+  }
+  #ministries .container {
+    width: 100%;
+  }
+  .ministries-grid {
+    width: 100%;
+    grid-template-columns: repeat(1fr 1fr);
+    padding: 0;
+    margin: 0;
   }
 
   /* Mobile reponsiveness for Sermon library and Join online pages */
+  /* Home page */
 
   #sermon-viewport .container {
     width: 90%;
@@ -2218,7 +2291,157 @@ input[type="email"] {
   }
 }
 
-@media screen and (max-width: 920px) {
+/* ================================================================== */
+/* Mobile responsiveness for wide tablets */
+/* =================================================================== */
+
+@media screen and (min-width: 921px) and (max-width: 1279px) and (min-height: 800px) and (max-height: 1400px) {
+  .hero-image {
+    height: 40dvh;
+  }
+  .hero-objects {
+    width: var(--container-width-sm);
+  }
+  .hero-text h1 {
+    font-size: 1.9rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .hero-buttons {
+    width: 37%;
+  }
+  /* Welcome section of the home page */
+  .new-here {
+    height: 35dvh;
+  }
+  .welcome-message h2 {
+    font-size: 2.5rem;
+  }
+
+  /* the meetings section of the home page */
+  #our-meetings {
+  }
+  #ministries .container {
+    width: 90%;
+  }
+  #our-meetings .meeting-invitation {
+    margin-top: -13%;
+  }
+
+  .meetings {
+    width: 100%;
+    height: 60dvh;
+  }
+
+  .ministries-grid {
+    width: 100%;
+    grid-template-columns: repeat(1fr 1fr);
+    padding: 0;
+    margin: 0;
+  }
+  .ministry-content {
+    padding: 5%;
+  }
+  .ministry-content p {
+    text-align: justify;
+  }
+}
+/* ================================================================== */
+/* Mobile responsiveness for medium sized screens and tablets */
+/* =================================================================== */
+@media screen and (min-width: 769px) and (max-width: 920px) {
+  /* responsive header */
+
+  .inner-header {
+    width: 90%;
+  }
+
+  /* Welcome section */
+  .hero-image {
+    height: 40dvh;
+  }
+  .hero-objects {
+    width: 90%;
+    align-items: space-between;
+
+    padding: 0px;
+  }
+  .hero-buttons {
+    width: 40%;
+  }
+  .hero-text h1 {
+    font-size: 1.6rem;
+    margin: 0px;
+    padding: 0px;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  /* welcome section of the home page */
+  #welcome {
+    width: 100%;
+  }
+  #welcome .container {
+    max-width: 90%;
+    width: 90%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .welcome-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .new-here {
+    height: 40vh;
+  }
+  .welcome-buttons {
+    margin-bottom: 2rem;
+  }
+  /* The our-meetings section of the home page */
+
+  #our-meetings {
+    width: 100%;
+  }
+  #our-meetings .container {
+    width: 90%;
+    max-width: 90%;
+    padding: 0;
+  }
+  #our-meetings .meeting-invitation {
+    margin-top: 30vh !important;
+  }
+  .meeting-invitation p {
+    text-align: center;
+  }
+  .meetings {
+    width: 100%;
+    height: 80dvh;
+  }
+  .service-details {
+    line-height: 1;
+  }
+
+  /* ministries section of the home page */
+  #ministries .container {
+    width: 90%;
+    max-width: 90%;
+  }
+  .ministries-grid {
+    width: 100%;
+    grid-template-columns: repeat(1fr 1fr);
+    padding: 0;
+    margin: 0;
+  }
+  .ministry-content {
+    padding: 5%;
+  }
+  .ministry-content p {
+    text-align: justify;
+  }
+
+  /* The Sermon library */
   #sermon-viewport .container {
     width: 90%;
     height: 100%;
@@ -2241,8 +2464,16 @@ input[type="email"] {
     height: 100dvh;
   }
 }
+
+/* Edge cases: For tablets with heights between 1000px and 1200px */
+
+@media screen and (min-width: 769px) and (max-width: 920px) and (min-height: 1080px) and (max-height: 1200px) {
+  #our-meetings .meeting-invitation {
+    margin-top: 2rem;
+  }
+}
 /* Tablet - 768px */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   /* Hero Section */
   .hero-objects {
     width: 90dvw;
@@ -2436,13 +2667,16 @@ input[type="email"] {
   }
 }
 
-/* Large Mobile - 380px */
-@media screen and (max-width: 480px) and (orientation: portrait) {
+/* Large Mobile - 380px - 480px*/
+@media screen and (min-width: 381px) and (max-width: 480px) and (orientation: portrait) {
   /* Hero Section */
   .hero-objects {
     width: 95dvw;
     height: 50dvh;
     padding: 1rem;
+    padding: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 15rem;
   }
 
   .hero-text h1 {
@@ -2501,6 +2735,11 @@ input[type="email"] {
   }
 
   /* Meetings Section */
+  .our-meetings {
+    width: 100%;
+    display: flex;
+  }
+
   .our-meetings h2 {
     font-size: 2rem;
   }
@@ -2515,7 +2754,7 @@ input[type="email"] {
 
   .service-details p {
     font-size: 1.1rem;
-    margin-bottom: -1rem;
+    margin-bottom: 1rem;
   }
 
   .service-map iframe {
@@ -2525,6 +2764,9 @@ input[type="email"] {
   }
 
   /* Ministries Section */
+  .ministries {
+    width: 100%;
+  }
   .ministries h2 {
     font-size: 2rem;
   }
@@ -2645,18 +2887,23 @@ input[type="email"] {
 /* Small Mobile - 300px */
 @media screen and (max-width: 380px) and (orientation: portrait) {
   /* Hero Section */
+  .hero-image {
+    width: 98%;
+  }
   .hero-objects {
     width: 98dvw;
     height: 45dvh;
     padding: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 15rem;
   }
 
   .hero-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .hero-text p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 
   .hero-buttons button {
@@ -2668,7 +2915,7 @@ input[type="email"] {
 
   /* Welcome Section */
   .welcome-grid {
-    width: 98%;
+    width: 95%;
     gap: 1rem;
   }
 
@@ -2684,27 +2931,49 @@ input[type="email"] {
     font-size: 1rem;
   }
 
-  .welcome-buttons button {
-    width: 100%;
+  #welcome button {
+    width: 95%;
     height: 2.5rem;
     font-size: 0.9rem;
+    line-height: 1;
   }
 
   /* Meetings Section */
+  #our-meetings .container {
+    width: 98%;
+    padding: 0;
+    justify-content: center;
+  }
+  #our-meetings h2 {
+    font-size: 1.8rem;
+  }
+  .meeting-invitation {
+    margin-top: -9rem;
+  }
+  .meeting-invitation p {
+    text-align: center;
+  }
   .meetings {
     width: 98%;
   }
 
-  .our-meetings h2 {
-    font-size: 1.8rem;
-  }
-
   .sunday-service {
     padding: 0.8rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .service-details {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 3.5;
   }
 
   .service-details p {
     font-size: 1rem;
+    text-align: left;
   }
 
   .service-map iframe {
@@ -2719,7 +2988,10 @@ input[type="email"] {
   }
 
   /* Ministries Section */
-  .ministries h2 {
+  #ministries .container {
+    width: 98%;
+  }
+  #ministries h2 {
     font-size: 1.8rem;
   }
 
@@ -2815,7 +3087,7 @@ input[type="email"] {
 }
 
 /* Media queries for small phones in landscape orientation */
-@media screen and (max-height: 960px) and (orientation: landscape) {
+@media screen and (max-width: 380px) and (max-height: 960px) and (orientation: landscape) {
   #sermon-viewport .container {
     width: 98%;
     height: 100%;
@@ -2908,7 +3180,7 @@ input[type="email"] {
   }
 
   /* Meetings Section */
-  .our-meetings h2 {
+  #our-meetings h2 {
     font-size: 1.4rem;
   }
 
@@ -2937,7 +3209,7 @@ input[type="email"] {
   }
 
   /* Ministries Section */
-  .ministries h2 {
+  #ministries h2 {
     font-size: 1.4rem;
   }
 
