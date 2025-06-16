@@ -294,7 +294,7 @@ header * {
 }
 .hero-image {
   /* top: 0; left: 0;bottom: 0; right: 0;   */
-  width: 90%; /* Fixed width */
+  width: 100%; /* Fixed width */
   height: 80dvh; /* Fixed height */
   overflow: hidden;
   position: relative;
@@ -566,10 +566,11 @@ header * {
 }
 .pastor-welcome img {
   width: 100%;
-  height: 7rem;
+  /* height: 7rem; */
   border-radius: 10px;
   object-fit: cover;
   object-position: 15% 10%;
+  margin-top: -0.5rem;
   margin-bottom: 1rem;
 }
 .pastor-welcome button {
@@ -1156,14 +1157,19 @@ header * {
 
 /* The about us page begins here */
 
-.about-us {
+#about-us {
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#about-us .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 60%;
 }
 .main-image {
-  width: 60%;
+  width: 100%;
   height: 40dvh;
   background-image: url(./images/praying_about_us.jpg);
   background-repeat: no-repeat;
@@ -1189,7 +1195,11 @@ header * {
 /* The main banner section of the About us page ends here */
 
 /* The Who We Are section of the About Us page starts here */
-.identity {
+#identity {
+  display: flex;
+  width: 100%;
+}
+#identity .container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1261,7 +1271,10 @@ header * {
 }
 /* The Who we are section of the About Us page ends here */
 
-.expressions {
+#expressions {
+  display: flex;
+}
+#expressions .container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1404,7 +1417,7 @@ header * {
   margin-top: -2rem;
 }
 
-.expressions button {
+#expressions button {
   margin-top: 2rem;
   width: 12rem;
   height: 3rem;
@@ -1419,10 +1432,14 @@ header * {
 
 /* The "What we believe" Section starts here */
 
-.beliefs {
+#beliefs {
+  display: flex;
+  width: 100%;
+}
+#beliefs .container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+
   align-items: center;
 }
 .beliefs-text {
@@ -1478,7 +1495,7 @@ header * {
   text-align: center;
 }
 
-.beliefs button {
+#beliefs button {
   background-color: white;
   color: black;
   font-weight: 500;
