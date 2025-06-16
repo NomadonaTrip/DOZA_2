@@ -2962,8 +2962,14 @@ input[type="email"] {
   }
 
   /* Welcome Section */
+  #welcome {
+    width: 100%;
+  }
+  #welcome .container {
+    width: 100%;
+  }
   .welcome-grid {
-    width: 95%;
+    width: 100%;
     gap: 1rem;
   }
 
@@ -2984,6 +2990,12 @@ input[type="email"] {
     height: 2.5rem;
     font-size: 0.9rem;
     line-height: 1;
+  }
+  .latest-sermon a {
+    width: 12rem;
+  }
+  .latest-sermon button {
+    height: 3rem;
   }
 
   /* Meetings Section */
