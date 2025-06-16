@@ -1277,10 +1277,16 @@ header * {
   width: 60%;
 }
 .values {
-  background-image: url(./images/our-values_1.jpg);
-  background-position: top;
-  background-size: cover;
+  grid-column: span 2;
+  background-color: var(--brand-color-orange);
 }
+.values h2 {
+  color: var(--foreground);
+}
+.values p {
+  color: var(--background);
+}
+
 .identity-text h1 {
   font-family: var(--doza-family);
   font-size: 3rem;
@@ -1305,7 +1311,6 @@ header * {
   gap: 1%;
 }
 .identity-grid > * {
-  background-color: var(--background);
   color: var(--brand-color-red);
   padding: 5%;
   border-radius: 20px;
@@ -1330,14 +1335,6 @@ header * {
   font-family: var(--doza-support);
   text-align: center;
   margin-top: -1rem;
-}
-.values {
-  grid-column: span 2;
-  background-color: var(--brand-color-orange);
-  color: var(--foreground);
-}
-.values h2 {
-  color: var(--foreground);
 }
 /* The Who we are section of the About Us page ends here */
 
@@ -1409,6 +1406,9 @@ header * {
 /* THe individual expression grid cells are described here */
 .bible-schools {
   grid-row: span 2;
+  background-image: url(./images/bible-school1.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .bible-schools img {
   width: 15rem;
@@ -1419,6 +1419,9 @@ header * {
   grid-column: span 2;
   display: flex;
   flex-direction: row;
+  background-image: url(./images/crusades.jpg);
+  background-size: cover;
+  background-position: bottom right;
 }
 #crusades-text {
   width: 60%;
@@ -1437,9 +1440,14 @@ header * {
   grid-column: span 2;
   display: flex;
   flex-direction: row;
+  background-color: var(--brand-color-orange);
+  background-size: cover;
 }
 .planting-text {
   width: 60%;
+}
+.church-planting h2 {
+  color: var(--background);
 }
 .church-planting p {
   text-align: left;
@@ -1450,12 +1458,18 @@ header * {
 }
 .feeding-clothing {
   grid-row: span 2;
+  background-image: url(./images/feeding-program4.JPG);
+  background-size: cover;
+  background-position: center;
 }
 .feeding-clothing h2 {
   text-align: center;
+  color: var(--foreground);
 }
 .feeding-clothing img {
   width: 15rem;
+  height: 12rem;
+  object-fit: cover;
   border-radius: 10px;
 }
 .feeding-clothing p {
@@ -1468,15 +1482,21 @@ header * {
   grid-column: span 2;
   display: flex;
   flex-direction: row;
+  background-image: url(./images/feeding\ program3.JPG);
+  background-size: cover;
+  background-position: top;
 }
 #homeless-text {
   width: 60%;
 }
 #homeless-text h2 {
   text-align: left;
+  color: var(--foreground);
 }
 .homeless-outreach p {
   text-align: left;
+  color: var(--foreground);
+  font-weight: 500;
 }
 #homeless-img img {
   width: 15rem;
