@@ -38,7 +38,8 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: 0px auto;
+  padding: 0px;
   line-height: 1.6rem;
 }
 .responsive-header {
@@ -288,16 +289,27 @@ header * {
 }
 
 /* Hero image css starts here */
-.hero {
+#hero-section {
   display: flex;
   justify-content: center;
 }
+.hero {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 0px 0px 20px 20px;
+  overflow: hidden;
+  width: 80%;
+}
+
 .hero-image {
   /* top: 0; left: 0;bottom: 0; right: 0;   */
   width: 100%; /* Fixed width */
-  height: 80dvh; /* Fixed height */
+  height: 70dvh; /* Fixed height */
   overflow: hidden;
-  position: relative;
+  position: absolute;
 
   display: flex;
   flex-direction: column;
@@ -306,7 +318,22 @@ header * {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  border-radius: 0px 0px 20px 20px;
+  z-index: -1;
+}
+
+.hero-gradient {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1),
+    15%,
+    rgba(0, 0, 0, 0) 20%
+  );
+  z-index: 0;
 }
 
 /* Slider css starts here */
@@ -334,25 +361,36 @@ header * {
   z-index: 2; /* Bring the active image to the front */
   transform: scale(1); /* Initial scale */
 }
-
+.poster img {
+  object-fit: cover;
+  object-position: bottom;
+}
 /* .hero-image * {
     align-self: center; color: white; 
 }*/
 
 /* Hero text css starts here */
 .hero-objects {
-  z-index: 2;
+  z-index: 12;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   height: 70dvh;
-  width: 80dvw;
+  width: 70dvw;
+  /* position: relative; */
+  top: 0;
+  left: 0;
+  padding: 0rem 1rem;
 }
-
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .hero-text h1 {
   color: var(--brand-color-red);
   margin-bottom: -10px;
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-family: var(--doza-family);
   text-transform: capitalize;
 }
@@ -370,7 +408,8 @@ header * {
 .hero-buttons {
   width: 25%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  margin: 0px;
 }
 .hero-buttons a {
   text-decoration: none;
@@ -628,20 +667,26 @@ header * {
   flex-direction: column;
 }
 .sunday-service {
-  background-color: var(--brand-color-orange);
+  /* background-color: var(--brand-color-orange); */
+  background-image: url(./images/sunday-service.jpg);
   border-radius: 20px;
-  color: black;
+  color: var(--brand-color-orange);
   padding: 5%;
   grid-column: span 2;
   display: flex;
   width: 100%;
   justify-content: space-between;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .service-details {
   width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+.service-details h2 {
+  color: var(--brand-color-orange);
 }
 .service-details p {
   font-size: 1.4rem;
@@ -652,6 +697,7 @@ header * {
   margin-top: 3rem;
   width: 100%;
 }
+
 .weekly-prayer {
   background-color: #080808;
   border-radius: 20px;
@@ -682,8 +728,8 @@ header * {
 }
 
 .sunday-service button {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #080808;
 }
 /* Our meetings section ends here */
 
@@ -821,6 +867,9 @@ header * {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 60%;
+  margin: 0px;
+  padding: 0px;
 }
 .footer-content {
   width: 100%;
@@ -1205,11 +1254,32 @@ header * {
   width: 100%;
   align-items: center;
 }
+.vision {
+  background-image: url(./images/delivering-people.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.vision p {
+  color: white;
+}
+.mission {
+  background-image: url(./images/transforming-lives.webp);
+  background-size: cover;
+  background-position: top;
+}
+.mission p {
+  color: white;
+}
 .identity-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 60%;
+}
+.values {
+  background-image: url(./images/our-values_1.jpg);
+  background-position: top;
+  background-size: cover;
 }
 .identity-text h1 {
   font-family: var(--doza-family);
@@ -1267,7 +1337,7 @@ header * {
   color: var(--foreground);
 }
 .values h2 {
-  color: var(--background);
+  color: var(--foreground);
 }
 /* The Who we are section of the About Us page ends here */
 
@@ -2133,10 +2203,10 @@ input[type="email"] {
 /* Desktop monitors - 1280px to 1600px */
 @media screen and (min-width: 1280px) and (max-width: 1600px) {
   .hero-image {
-    width: 80%;
+    width: 100%;
   }
   .hero-objects {
-    width: 70dvw;
+    width: 100%;
   }
   #welcome .container {
     width: 80%;
