@@ -21,7 +21,7 @@
   --animation-timing: 200ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
   /* --brand-color-red: #d80e10; */
-  --brand-color-red: #f0a62d;
+  --brand-color-red: #ae0903;
   --brand-color-orange: #f0a62d;
   --brand-gradient-orange: linear-gradient(#ff9310, #ffd960);
   --doza-family: "DM Serif Text", serif;
@@ -388,7 +388,7 @@ header * {
   align-items: flex-start;
 }
 .hero-text h1 {
-  color: var(--brand-color-red);
+  color: var(--brand-color-orange);
   margin-bottom: -10px;
   font-size: 2.3rem;
   font-family: var(--doza-family);
@@ -415,7 +415,7 @@ header * {
   text-decoration: none;
 }
 .hero-buttons button {
-  background-color: var(--brand-color-red);
+  background-color: var(--brand-color-orange);
   color: white;
   font-weight: 300;
   font-size: large;
@@ -431,7 +431,7 @@ header * {
   color: #fffaec;
   font-weight: 300;
   font-size: large;
-  border: 2px var(--brand-color-red) solid;
+  border: 2px var(--brand-color-orange) solid;
   cursor: pointer;
   background-color: transparent;
 }
@@ -535,10 +535,16 @@ header * {
 
 .locations {
   grid-column: span 2;
-  background-color: #151515;
+  /* background-color: #151515; */
+  height: 13rem;
+  background-image: url(./images/lifegroups.jpg);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.locations h2 {
+  color: var(--foreground);
 }
 .location-buttons {
   width: 100%;
@@ -546,7 +552,7 @@ header * {
   justify-content: flex-start;
 }
 .locations button {
-  background-color: var(--brand-color-red);
+  background-color: var(--brand-color-orange);
   font-family: var(--doza-family);
   font-family: var(--doza-support);
   width: 10rem;
@@ -560,7 +566,7 @@ header * {
 }
 /* This section describes the latest sermon div */
 .latest-sermon {
-  background-color: var(--brand-color-red);
+  background-color: var(--brand-color-orange);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -613,7 +619,7 @@ header * {
   margin-bottom: 1rem;
 }
 .pastor-welcome button {
-  background-color: var(--brand-color-red);
+  background-color: var(--brand-color-orange);
   font-family: var(--doza-support);
   color: white;
   width: 6rem;
@@ -808,7 +814,7 @@ header * {
 .ministry-content h3 {
   font-family: var(--doza-family);
   font-size: 1.8rem;
-  color: var(--brand-color-red);
+  color: var(--brand-color-orange);
   margin-bottom: 1rem;
 }
 
@@ -821,7 +827,7 @@ header * {
 }
 
 .ministry-cta {
-  background-color: var(--brand-color-red);
+  background-color: var(--brand-color-orange);
   color: white;
   font-family: var(--doza-support);
   font-size: 1rem;
@@ -836,8 +842,8 @@ header * {
 
 .ministry-cta:hover {
   background-color: transparent;
-  color: var(--brand-color-red);
-  border: 2px solid var(--brand-color-red);
+  color: var(--brand-color-orange);
+  border: 2px solid var(--brand-color-orange);
   transform: translateY(-2px);
 }
 
@@ -847,7 +853,7 @@ header * {
 }
 
 .lifegroups {
-  border-top: 4px solid var(--brand-color-red);
+  border-top: 4px solid var(--brand-color-orange);
 }
 
 .prayer-ministry {
@@ -883,7 +889,7 @@ header * {
   font-family: var(--doza-family);
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--brand-color-red);
+  color: var(--brand-color-orange);
 }
 
 .footer-section p,
@@ -1231,7 +1237,7 @@ header * {
   height: 100%;
   padding-left: 4%;
   text-transform: capitalize;
-  color: var(--brand-color-red);
+  color: var(--brand-color-orange);
   font-size: 1.4rem;
   display: flex;
   flex-direction: column;
@@ -1311,12 +1317,17 @@ header * {
   gap: 1%;
 }
 .identity-grid > * {
-  color: var(--brand-color-red);
+  color: var(--brand-color-orange);
   padding: 5%;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.identity-grid > *:hover {
+  transform: scale(1.09);
+  transition: var(--animation-timing);
+  border: 1px solid var(--brand-color-orange);
 }
 .identity-grid h2 {
   font-size: 2.2rem;
@@ -1384,6 +1395,11 @@ header * {
   flex-direction: column;
   align-items: center;
   color: white;
+}
+.expressions-grid > *:hover {
+  transform: scale(1.09);
+  transition: var(--animation-timing);
+  border: 1px solid var(--brand-color-orange);
 }
 .expressions-grid h2 {
   font-size: 1.5rem;
@@ -1509,14 +1525,20 @@ header * {
 
 #expressions button {
   margin-top: 2rem;
-  width: 12rem;
+  width: 16rem;
   height: 3rem;
   border: none;
   border-radius: 10px;
   font-family: var(--doza-support);
-  font-size: 1.1rem;
-  background-color: black;
+  font-size: 1.5rem;
+  background-color: var(--brand-color-orange);
   color: white;
+}
+#expressions button:hover {
+  background-color: transparent;
+  border: 1px solid var(--brand-color-orange);
+  color: var(--brand-color-orange);
+  transition: var(--animation-timing);
 }
 /* The what we do section ends here */
 
@@ -1624,7 +1646,7 @@ header * {
 .ministry-hero-section h1 {
   font-family: var(--doza-family);
   font-size: 3rem; /* Consistent with .hero-text h1 or .meetings h2 */
-  color: var(--brand-color-red);
+  color: var(--brand-color-orange);
   margin-bottom: 1rem;
 }
 
@@ -1657,7 +1679,9 @@ header * {
   transform: translateY(20px);
   animation: fadeInUp 0.7s ease-out forwards;
 }
-
+#kids-church {
+  background-image: url(./images/kids-church_2.webp);
+}
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -1742,7 +1766,7 @@ header * {
 
 .ministry-article .ministry-image-placeholder {
   width: 100%;
-  height: 250px; /* Or aspect ratio based */
+  height: 300px; /* Or aspect ratio based */
   background-color: #e0e0e0;
   border-radius: 10px;
   display: flex;
@@ -1751,9 +1775,12 @@ header * {
   font-style: italic;
   color: #888;
   margin: 1.5rem 0;
+  overflow: hidden;
   /* Could add a subtle pattern or icon here */
 }
-
+.ministry-image-placeholder img {
+  height: 400px;
+}
 .ministry-article ul {
   list-style: none; /* Remove default bullets */
   padding-left: 0;
@@ -1793,7 +1820,10 @@ header * {
   font-weight: 500;
   color: var(--text-dark);
 }
-
+/* kids' church styling */
+#kids-church {
+  background-image: url(./images/kids-church_5.webp);
+}
 /* Prayer Programs Styling */
 .prayer-programs-grid {
   display: grid;
@@ -1844,7 +1874,7 @@ header * {
 }
 /* Button styles (assuming consistency with homepage) */
 .btn-ministry {
-  background-color: var(--brand-color-red);
+  background-color: var(--brand-color-orange);
   color: white;
   font-family: var(
     --doza-support
