@@ -2888,6 +2888,12 @@ input[type="email"] {
   }
   .hero-gradient {
     height: 70dvh;
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1),
+      30%,
+      rgba(0, 0, 0, 0) 80%
+    );
   }
   .hero-image {
     height: 70dvh;
@@ -3132,8 +3138,21 @@ input[type="email"] {
 /* Small Mobile - 300px */
 @media screen and (max-width: 380px) and (orientation: portrait) {
   /* Hero Section */
+  .hero {
+    width: 95%;
+  }
   .hero-image {
     width: 98%;
+    height: 80dvh;
+  }
+  .hero-gradient {
+    height: 80dvh;
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1),
+      30%,
+      rgba(0, 0, 0, 0) 80%
+    );
   }
   .hero-objects {
     width: 98dvw;
