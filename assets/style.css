@@ -2038,7 +2038,8 @@ header * {
   margin-top: 0rem;
 }
 
-/* The giving page */
+/*=================== The giving page=============== */
+/* ================================================ */
 #giving-banner {
   width: 100%;
   display: flex;
@@ -2374,6 +2375,48 @@ input[type="email"] {
     margin-right: 0.8rem;
   }
 
+  /* ==================Giving Page mobile responsiveness============= */
+  /* =============================================================== */
+
+  #giving-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #giving-banner .container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+  #giving-banner {
+    width: 100dvw;
+    height: 30dvh;
+    /* object-fit: cover;
+  object-position: top; */
+    /* opacity: 0.8; */
+  }
+  #giving-banner .container h1 {
+    margin-top: 9rem;
+    font-size: 4rem;
+    color: white;
+    z-index: 10;
+  }
+  #giving-note .container {
+    width: 80%;
+  }
+  #giving-note {
+    width: 100%;
+  }
+
+  #giving-note h2 {
+    font-family: var(--doza-family);
+    font-size: 2.5rem;
+  }
+  #giving-note p {
+    font-size: 1.4rem;
+    margin-top: -1rem;
+  }
+
   /* =================footer responsiveness here =================== */
 }
 
@@ -2484,6 +2527,43 @@ input[type="email"] {
   #video-library .container {
     width: 90%;
     height: 100dvh;
+  }
+
+  /* =====Giving Page mobile responsiveness for large tablets===== */
+  /* ============================================================= */
+
+  #giving-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #giving-banner .container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  #giving-banner {
+    width: 100dvw;
+    height: 30dvh;
+    /* object-fit: cover;
+  object-position: top; */
+    /* opacity: 0.8; */
+  }
+  #giving-banner .container h1 {
+    margin-top: 9rem;
+    font-size: 4rem;
+    color: white;
+    z-index: 10;
+  }
+  #giving-note .container {
+    width: 90%;
+  }
+  #giving-note {
+    width: 100%;
+  }
+
+  #giving-options .container {
+    width: 90%;
   }
 }
 
@@ -2791,6 +2871,40 @@ input[type="email"] {
   #video-library .container {
     width: 90%;
     height: 100dvh;
+  }
+
+  #giving-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #giving-banner .container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  #giving-banner {
+    width: 100dvw;
+    height: 30dvh;
+    /* object-fit: cover;
+  object-position: top; */
+    /* opacity: 0.8; */
+  }
+  #giving-banner .container h1 {
+    margin-top: 9rem;
+    font-size: 4rem;
+    color: white;
+    z-index: 10;
+  }
+  #giving-note .container {
+    width: 90%;
+  }
+  #giving-note {
+    width: 100%;
+  }
+
+  #giving-options .container {
+    width: 90%;
   }
 }
 
@@ -3282,6 +3396,40 @@ input[type="email"] {
     font-size: 0.8rem;
     margin: 10px 0.5rem 0 0.5rem;
   }
+
+  #giving-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #giving-banner .container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  #giving-banner {
+    width: 100dvw;
+    height: 30dvh;
+    /* object-fit: cover;
+  object-position: top; */
+    /* opacity: 0.8; */
+  }
+  #giving-banner .container h1 {
+    margin-top: 9rem;
+    font-size: 4rem;
+    color: white;
+    z-index: 10;
+  }
+  #giving-note .container {
+    width: 90%;
+  }
+  #giving-note {
+    width: 100%;
+  }
+
+  #giving-options .container {
+    width: 90%;
+  }
 }
 
 /* Large Mobile - 380px - 480px*/
@@ -3652,6 +3800,113 @@ input[type="email"] {
     margin: 8px 0.3rem 0 0.3rem;
     border-radius: 15px;
   }
+
+  #giving-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #giving-banner .container {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+  }
+  #giving-banner {
+    width: 100dvw;
+    height: 30dvh;
+    /* object-fit: cover;
+  object-position: top; */
+    /* opacity: 0.8; */
+  }
+  #giving-banner .container h1 {
+    margin-top: 9rem;
+    font-size: 4rem;
+    color: white;
+    z-index: 10;
+  }
+  #giving-note .container {
+    width: 95%;
+  }
+  #giving-note {
+    width: 100%;
+  }
+  #giving-note h2 {
+    font-size: 2.4rem;
+  }
+
+  #giving-options .container {
+    width: 95%;
+  }
+  /* the giving options subsection of the giving page */
+
+  #giving-options {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  #giving-options .container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .interac,
+  .tithely {
+    width: 50%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #giving-options img {
+    width: 12rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 2rem 2rem 0rem 0rem;
+  }
+
+  .interac-text,
+  .tithely-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    line-height: 1.6;
+  }
+  #giving-options h2 {
+    text-align: center;
+  }
+  #giving-options p {
+    text-align: center;
+    font-family: var(--doza-support);
+    margin-top: -0.6rem;
+    text-wrap: wrap;
+  }
+
+  #giving-options button {
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    border: none;
+    margin-top: 0.4rem;
+    margin-bottom: 3rem;
+    border-radius: 20px;
+    text-transform: capitalize;
+    height: 3rem;
+    width: 13rem;
+  }
+  #giving-options button:hover {
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+    transition: var(--animation-timing);
+  }
 }
 @media (max-height: 840px) and (orientation: landscape) {
   #sermon-viewport .container {
@@ -4006,6 +4261,111 @@ input[type="email"] {
     font-size: 1rem;
     margin: 5px 0.2rem 0 0.2rem;
     border-radius: 10px;
+  }
+
+  #giving-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #giving-banner .container {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+  }
+  #giving-banner {
+    width: 100dvw;
+    height: 30dvh;
+    /* object-fit: cover;
+  object-position: top; */
+    /* opacity: 0.8; */
+  }
+  #giving-banner .container h1 {
+    margin-top: 9rem;
+    font-size: 2.5rem;
+    color: white;
+    z-index: 10;
+  }
+  #giving-note .container {
+    width: 98%;
+  }
+  #giving-note {
+    width: 100%;
+  }
+  #giving-note h2 {
+    font-size: 2.2rem;
+  }
+  #giving-options .container {
+    width: 98%;
+  }
+
+  #giving-options {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  #giving-options .container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .interac,
+  .tithely {
+    width: 50%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #giving-options img {
+    width: 12rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 2rem 2rem 0rem 0rem;
+  }
+
+  .interac-text,
+  .tithely-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    line-height: 1.6;
+  }
+  #giving-options h2 {
+    text-align: center;
+  }
+  #giving-options p {
+    text-align: center;
+    font-family: var(--doza-support);
+    margin-top: -0.6rem;
+    text-wrap: wrap;
+  }
+
+  #giving-options button {
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    border: none;
+    margin-top: 0.4rem;
+    margin-bottom: 3rem;
+    border-radius: 20px;
+    text-transform: capitalize;
+    height: 3rem;
+    width: 13rem;
+  }
+  #giving-options button:hover {
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+    transition: var(--animation-timing);
   }
 
   /* Stack buttons vertically on smart watches */
