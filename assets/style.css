@@ -195,7 +195,7 @@ header * {
   list-style: none;
 }
 .inner-header {
-  width: 92%;
+  width: 80%;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -1266,6 +1266,9 @@ header * {
 /* The main banner section of the About us page ends here */
 
 /* The Who We Are section of the About Us page starts here */
+.inner-header {
+  width: 80%;
+}
 #identity {
   display: flex;
   justify-content: center;
@@ -2364,6 +2367,42 @@ input[type="email"] {
     width: 80%;
   }
 
+  /* ==========Our Ministries page ================= */
+  /* ============================================== */
+
+  .ministry-hero-section {
+    width: 80%;
+    padding: 4rem 2rem;
+    border-radius: 0px 0px 20px 20px;
+    background-color: var(--text-dark); /* Or a subtle gradient/image */
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 3rem;
+    /* Surprise: Subtle parallax or pattern background could be added */
+  }
+
+  .ministries-content-wrapper {
+    width: 80%; /* Similar to .welcome-grid, .meetings width */
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Space between ministry articles */
+  }
+
+  .ministry-article {
+    background-color: var(
+      --background-light-gray
+    ); /* White background for content clarity */
+    padding: 2.5rem;
+    border-radius: 15px; /* Softer than 20px, or keep 20px for consistency */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    /* Surprise: Subtle entry animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+
   /* =====Sermon Library Page */
   #sermon-viewport .container {
     width: 80%;
@@ -2596,6 +2635,42 @@ input[type="email"] {
   #video-library .container {
     width: 90%;
     height: 100dvh;
+  }
+
+  /* ==========Our Ministries page ================= */
+  /* ============================================== */
+
+  .ministry-hero-section {
+    width: 80%;
+    padding: 4rem 2rem;
+    border-radius: 0px 0px 20px 20px;
+    background-color: var(--text-dark); /* Or a subtle gradient/image */
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 3rem;
+    /* Surprise: Subtle parallax or pattern background could be added */
+  }
+
+  .ministries-content-wrapper {
+    width: 80%; /* Similar to .welcome-grid, .meetings width */
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Space between ministry articles */
+  }
+
+  .ministry-article {
+    background-color: var(
+      --background-light-gray
+    ); /* White background for content clarity */
+    padding: 2.5rem;
+    border-radius: 15px; /* Softer than 20px, or keep 20px for consistency */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    /* Surprise: Subtle entry animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.7s ease-out forwards;
   }
 
   /* =====Giving Page mobile responsiveness for large tablets===== */
@@ -2927,6 +3002,42 @@ input[type="email"] {
   #homeless-text,
   #homeless-img {
     margin-top: -2rem;
+  }
+
+  /* ==========Our Ministries page ================= */
+  /* ============================================== */
+
+  .ministry-hero-section {
+    width: 90%;
+    padding: 4rem 2rem;
+    border-radius: 0px 0px 20px 20px;
+    background-color: var(--text-dark); /* Or a subtle gradient/image */
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 3rem;
+    /* Surprise: Subtle parallax or pattern background could be added */
+  }
+
+  .ministries-content-wrapper {
+    width: 90%; /* Similar to .welcome-grid, .meetings width */
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Space between ministry articles */
+  }
+
+  .ministry-article {
+    background-color: var(
+      --background-light-gray
+    ); /* White background for content clarity */
+    padding: 2.5rem;
+    border-radius: 15px; /* Softer than 20px, or keep 20px for consistency */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    /* Surprise: Subtle entry animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.7s ease-out forwards;
   }
 
   /* ===================== */
@@ -3423,8 +3534,54 @@ input[type="email"] {
   #homeless-img {
     margin-top: -2rem;
   }
-  /* Sermon library and Join online pages */
 
+  /* ==========Our Ministries page ================= */
+  /* ============================================== */
+
+  .ministry-hero-section {
+    width: 90%;
+    padding: 4rem 2rem;
+    border-radius: 0px 0px 20px 20px;
+    background-color: var(--text-dark); /* Or a subtle gradient/image */
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 3rem;
+    /* Surprise: Subtle parallax or pattern background could be added */
+  }
+
+  .ministries-content-wrapper {
+    width: 90%; /* Similar to .welcome-grid, .meetings width */
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Space between ministry articles */
+  }
+
+  .ministry-article {
+    background-color: var(
+      --background-light-gray
+    ); /* White background for content clarity */
+    padding: 2.5rem;
+    border-radius: 15px; /* Softer than 20px, or keep 20px for consistency */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    /* Surprise: Subtle entry animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+  .prayer-programs-grid {
+    grid-template-columns: 1fr;
+  }
+  #prayer-storm {
+    grid-column: span 2;
+  }
+  #daily-prayer-call {
+    grid-column: span 2;
+  }
+
+  /* Sermon library and Join online pages */
+  /* =================================== */
   #sermon-viewport .container {
     width: 90%;
     margin-top: 2rem;
@@ -3807,6 +3964,53 @@ input[type="email"] {
   #expressions button {
     margin-top: 7rem;
   }
+
+  /* ==========Our Ministries page ================= */
+  /* ============================================== */
+
+  .ministry-hero-section {
+    width: 98%;
+    padding: 4rem 2rem;
+    border-radius: 0px 0px 20px 20px;
+    background-color: var(--text-dark); /* Or a subtle gradient/image */
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 3rem;
+    /* Surprise: Subtle parallax or pattern background could be added */
+  }
+
+  .ministries-content-wrapper {
+    width: 98%; /* Similar to .welcome-grid, .meetings width */
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Space between ministry articles */
+  }
+
+  .ministry-article {
+    background-color: var(
+      --background-light-gray
+    ); /* White background for content clarity */
+    padding: 2.5rem;
+    border-radius: 15px; /* Softer than 20px, or keep 20px for consistency */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    /* Surprise: Subtle entry animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+
+  .prayer-programs-grid {
+    grid-template-columns: 1fr;
+  }
+  #prayer-storm {
+    grid-column: span 2;
+  }
+  #daily-prayer-call {
+    grid-column: span 2;
+  }
+
   /* Watch sermon page */
   /* ================= */
 
@@ -4375,6 +4579,54 @@ input[type="email"] {
     margin: 5px 0.2rem 0 0.2rem;
     border-radius: 10px;
   }
+  /* ==========Our Ministries page ================= */
+  /* ============================================== */
+
+  .ministry-hero-section {
+    width: 98%;
+    padding: 4rem 2rem;
+    border-radius: 0px 0px 20px 20px;
+    background-color: var(--text-dark); /* Or a subtle gradient/image */
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 3rem;
+    /* Surprise: Subtle parallax or pattern background could be added */
+  }
+
+  .ministries-content-wrapper {
+    width: 98%; /* Similar to .welcome-grid, .meetings width */
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Space between ministry articles */
+  }
+
+  .ministry-article {
+    background-color: var(
+      --background-light-gray
+    ); /* White background for content clarity */
+    padding: 2.5rem;
+    border-radius: 15px; /* Softer than 20px, or keep 20px for consistency */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    /* Surprise: Subtle entry animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+
+  .prayer-programs-grid {
+    grid-template-columns: 1fr;
+  }
+  #prayer-storm {
+    grid-column: span 2;
+  }
+  #daily-prayer-call {
+    grid-column: span 2;
+  }
+
+  /* ===========Giving Page================== */
+  /* ======================================= */
 
   #giving-banner {
     width: 100%;
