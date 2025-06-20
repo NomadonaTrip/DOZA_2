@@ -1252,12 +1252,13 @@ header * {
 /* The Who We Are section of the About Us page starts here */
 #identity {
   display: flex;
+  justify-content: center;
   width: 100%;
 }
 #identity .container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 60%;
   align-items: center;
 }
 .vision {
@@ -1311,7 +1312,7 @@ header * {
 }
 .identity-grid {
   display: grid;
-  width: 60%;
+  width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1%;
@@ -1349,13 +1350,16 @@ header * {
 }
 /* The Who we are section of the About Us page ends here */
 
+/* What we do section of the About Us page starts here */
+
 #expressions {
   display: flex;
+  justify-content: center;
 }
 #expressions .container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 60%;
   align-items: center;
 }
 .expressions-text {
@@ -1382,7 +1386,7 @@ header * {
 }
 .expressions-grid {
   display: grid;
-  width: 60%;
+  width: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1%;
@@ -1546,12 +1550,13 @@ header * {
 
 #beliefs {
   display: flex;
+  justify-content: center;
   width: 100%;
 }
 #beliefs .container {
   display: flex;
   flex-direction: column;
-
+  width: 60%;
   align-items: center;
 }
 .beliefs-text {
@@ -1576,7 +1581,7 @@ header * {
 
 .beliefs-grid {
   display: grid;
-  width: 60%;
+  width: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 1%;
@@ -2297,6 +2302,21 @@ input[type="email"] {
     grid-template-columns: repeat(3, 1fr);
     padding: 0;
   }
+  /* ======About Us page================== */
+  /* ===================================== */
+  #about-us .container {
+    width: 80%;
+  }
+  #identity .container {
+    width: 80%;
+  }
+  #expressions .container {
+    width: 80%;
+  }
+  #beliefs .container {
+    width: 80%;
+  }
+
   /* =====Sermon Library Page */
   #sermon-viewport .container {
     width: 80%;
@@ -2346,6 +2366,8 @@ input[type="email"] {
     font-size: 0.9rem;
     margin-right: 0.8rem;
   }
+
+  /* =================footer responsiveness here =================== */
 }
 
 /* Medium Desktop - 1280px */
@@ -2355,9 +2377,11 @@ input[type="email"] {
   }
   .hero {
     width: 85%;
+    height: 50dvh;
   }
   .hero-image {
     width: 100%;
+    height: 50dvh;
   }
   .hero-objects {
     width: 100%;
@@ -2409,6 +2433,25 @@ input[type="email"] {
     grid-template-columns: repeat(1fr 1fr);
     padding: 0;
     margin: 0;
+  }
+
+  /* ===========About us mobile responsiveness for large tablets============== */
+
+  /* ========================================================================== */
+  #about-us .container {
+    width: 90%;
+  }
+  .identity-text {
+    width: 90%;
+  }
+  #identity .container {
+    width: 90%;
+  }
+  #expressions .container {
+    width: 90%;
+  }
+  #beliefs .container {
+    width: 90%;
   }
 
   /* Mobile reponsiveness for Sermon library and Join online pages */
@@ -2604,6 +2647,111 @@ input[type="email"] {
     text-align: justify;
   }
 
+  /* ========About Us page for tablets */
+
+  #about-us .container {
+    width: 90%;
+  }
+  .identity-text {
+    width: 90%;
+  }
+  #identity .container {
+    width: 90%;
+  }
+  .expressions-text {
+    width: 90%;
+  }
+  #expressions .container {
+    width: 90%;
+  }
+  .beliefs-text {
+    width: 90%;
+  }
+  #beliefs .container {
+    width: 90%;
+  }
+  .expressions-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1%;
+  }
+  .bible-schools {
+    grid-row: span 2;
+    background-image: url(./images/bible-school1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .bible-schools img {
+    width: 15rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  .crusades {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: row;
+    background-image: url(./images/crusades.jpg);
+    background-size: cover;
+    background-position: bottom right;
+  }
+  #crusades-text {
+    width: 60%;
+  }
+  .crusades p {
+    text-align: left;
+  }
+  #crusade-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  .seminars {
+    text-align: center;
+  }
+  .church-planting {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--brand-color-orange);
+    background-size: cover;
+  }
+  .planting-text {
+    width: 60%;
+  }
+  .church-planting h2 {
+    color: var(--background);
+  }
+  .church-planting p {
+    text-align: left;
+  }
+  .planting-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  .feeding-clothing {
+    grid-row: span 1;
+  }
+
+  #homeless-text h2 {
+    text-align: left;
+    color: var(--foreground);
+  }
+  .homeless-outreach p {
+    text-align: left;
+    color: var(--foreground);
+    font-weight: 500;
+  }
+  #homeless-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  #homeless-text,
+  #homeless-img {
+    margin-top: -2rem;
+  }
+
+  /* ===================== */
   /* The Sermon library */
   #sermon-viewport .container {
     width: 90%;
@@ -2816,6 +2964,237 @@ input[type="email"] {
     max-width: 90%;
   }
 
+  /* /* ========About Us page for small tablets and large phones */
+
+  #about-us .container {
+    width: 90%;
+  }
+  .identity-text {
+    width: 90%;
+  }
+  #identity .container {
+    width: 90%;
+  }
+  .expressions-text {
+    width: 90%;
+  }
+  #expressions .container {
+    width: 90%;
+  }
+  .beliefs-text {
+    width: 90%;
+  }
+  #beliefs .container {
+    width: 90%;
+  }
+
+  #about-us .container {
+    width: 90%;
+  }
+  .identity-text {
+    width: 90%;
+  }
+  #identity .container {
+    width: 90%;
+  }
+  .expressions-text {
+    width: 90%;
+  }
+  #expressions .container {
+    width: 90%;
+  }
+  .beliefs-text {
+    width: 90%;
+  }
+  #beliefs .container {
+    width: 90%;
+  }
+  .expressions-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1%;
+  }
+  .bible-schools {
+    grid-row: span 2;
+    background-image: url(./images/bible-school1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .bible-schools img {
+    width: 15rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  .crusades {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: row;
+    background-image: url(./images/crusades.jpg);
+    background-size: cover;
+    background-position: bottom right;
+  }
+  #crusades-text {
+    width: 60%;
+  }
+  .crusades p {
+    text-align: left;
+  }
+  #crusade-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  .seminars {
+    text-align: center;
+  }
+  .church-planting {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--brand-color-orange);
+    background-size: cover;
+  }
+  .planting-text {
+    width: 60%;
+  }
+  .church-planting h2 {
+    color: var(--background);
+  }
+  .church-planting p {
+    text-align: left;
+  }
+  .planting-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  .feeding-clothing {
+    grid-row: span 1;
+  }
+
+  #homeless-text h2 {
+    text-align: left;
+    color: var(--foreground);
+  }
+  .homeless-outreach p {
+    text-align: left;
+    color: var(--foreground);
+    font-weight: 500;
+  }
+  #homeless-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  #homeless-text,
+  #homeless-img {
+    margin-top: -2rem;
+  }
+  /* =========About Us page============== */
+  /* ==================================== */
+  .inner-header {
+    width: 90%;
+  }
+  #about-us .container {
+    width: 90%;
+  }
+  .identity-text {
+    width: 90%;
+  }
+  #identity .container {
+    width: 90%;
+  }
+  .expressions-text {
+    width: 90%;
+  }
+  #expressions .container {
+    width: 90%;
+  }
+  .beliefs-text {
+    width: 90%;
+  }
+  #beliefs .container {
+    width: 90%;
+  }
+  .expressions-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1%;
+  }
+  .bible-schools {
+    grid-row: span 2;
+    background-image: url(./images/bible-school1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .bible-schools img {
+    width: 15rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  .crusades {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: row;
+    background-image: url(./images/crusades.jpg);
+    background-size: cover;
+    background-position: bottom right;
+  }
+  #crusades-text {
+    width: 60%;
+  }
+  .crusades p {
+    text-align: left;
+  }
+  #crusade-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  .seminars {
+    text-align: center;
+  }
+  .church-planting {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--brand-color-orange);
+    background-size: cover;
+  }
+  .planting-text {
+    width: 60%;
+  }
+  .church-planting h2 {
+    color: var(--background);
+  }
+  .church-planting p {
+    text-align: left;
+  }
+  .planting-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  .feeding-clothing {
+    grid-row: span 1;
+  }
+
+  #homeless-text h2 {
+    text-align: left;
+    color: var(--foreground);
+  }
+  .homeless-outreach p {
+    text-align: left;
+    color: var(--foreground);
+    font-weight: 500;
+  }
+  #homeless-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  #homeless-text,
+  #homeless-img {
+    margin-top: -2rem;
+  }
   /* Sermon library and Join online pages */
 
   #sermon-viewport .container {
@@ -3035,7 +3414,120 @@ input[type="email"] {
   .ministry-content h3 {
     font-size: 1.5rem;
   }
+
+  /* About us page for mobile phones */
+  /* ============================== */
+
+  #about-us .container {
+    width: 98%;
+  }
+  .identity-text {
+    width: 96%;
+  }
+  #identity .container {
+    width: 98%;
+  }
+  .identity-grid {
+    grid-template-columns: 1fr;
+  }
+  .vision {
+    grid-column: span 2;
+  }
+  .expressions-text {
+    width: 98%;
+  }
+  #expressions .container {
+    width: 98%;
+  }
+  .beliefs-text {
+    width: 95%;
+  }
+  #beliefs .container {
+    width: 98%;
+  }
+  .expressions-grid {
+    display: grid;
+    width: 98%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1%;
+  }
+  .bible-schools {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-position: 50% 23%;
+  }
+
+  .crusades {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: row;
+    background-image: url(./images/crusades.jpg);
+    background-size: cover;
+    background-position: bottom right;
+  }
+  #crusades-text {
+    width: 60%;
+  }
+  .crusades p {
+    text-align: left;
+  }
+  #crusade-img img {
+    /* width: 15rem; */
+    border-radius: 10px;
+  }
+  .seminars {
+    text-align: center;
+  }
+  .church-planting {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--brand-color-orange);
+    background-size: cover;
+  }
+  .planting-text {
+    width: 60%;
+  }
+  .church-planting h2 {
+    color: var(--background);
+  }
+  .church-planting p {
+    text-align: left;
+  }
+  .planting-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  .feeding-clothing {
+    grid-row: span 1;
+  }
+  .homeless-outreach {
+    grid-column: span 1;
+  }
+  #homeless-text h2 {
+    text-align: left;
+    color: var(--foreground);
+  }
+  .homeless-outreach p {
+    text-align: left;
+    color: var(--foreground);
+    font-weight: 500;
+  }
+  #homeless-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  #homeless-text,
+  #homeless-img {
+    margin-top: -2rem;
+  }
+  #expressions button {
+    margin-top: 7rem;
+  }
   /* Watch sermon page */
+  /* ================= */
+
   /* #sermon-viewport {
   width: 100%;
   display: flex;
@@ -3283,6 +3775,134 @@ input[type="email"] {
     font-size: 0.9rem;
   }
 
+  /* ========About Us page=============== */
+  /* =================================== */
+
+  #about-us .container {
+    width: 98%;
+  }
+  #about-us h1 {
+    font-size: 1.7rem;
+  }
+  .identity-text {
+    width: 96%;
+  }
+  #identity .container {
+    width: 98%;
+  }
+  .identity-text h1 {
+    font-size: 1.8rem;
+  }
+  .identity-grid {
+    grid-template-columns: 1fr;
+  }
+  .vision {
+    grid-column: span 2;
+  }
+  .expressions-text {
+    width: 98%;
+  }
+  .expressions-text h1 {
+    font-size: 1.8rem;
+  }
+  #expressions .container {
+    width: 98%;
+  }
+  .beliefs-text {
+    width: 95%;
+  }
+  .beliefs-text h1 {
+    font-size: 1.8rem;
+  }
+  #beliefs .container {
+    width: 98%;
+  }
+  .expressions-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1%;
+  }
+  .bible-schools {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-position: 50% 23%;
+  }
+
+  .crusades {
+    grid-column: span 1;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: row;
+    background-image: url(./images/crusades.jpg);
+    background-size: cover;
+    background-position: bottom right;
+  }
+  #crusades-text {
+    width: 60%;
+  }
+  .crusades p {
+    text-align: left;
+  }
+  #crusade-img img {
+    /* width: 15rem; */
+    border-radius: 10px;
+  }
+  .seminars {
+    text-align: center;
+  }
+  .church-planting {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--brand-color-orange);
+    background-size: cover;
+  }
+  .planting-text {
+    width: 90%;
+    text-align: center;
+  }
+  .church-planting h2 {
+    color: var(--background);
+  }
+  .church-planting p {
+    text-align: center;
+  }
+  .planting-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  .feeding-clothing {
+    grid-row: span 1;
+  }
+  .homeless-outreach {
+    grid-column: span 1;
+  }
+  #homeless-text h2 {
+    text-align: left;
+    color: var(--foreground);
+  }
+  .homeless-outreach p {
+    text-align: left;
+    color: var(--foreground);
+    font-weight: 500;
+  }
+  #homeless-img img {
+    width: 15rem;
+    border-radius: 10px;
+  }
+  #homeless-text,
+  #homeless-img {
+    margin-top: -2rem;
+  }
+  #expressions button {
+    margin-top: 7rem;
+  }
+  .beliefs-text {
+    width: 98%;
+  }
   /* Sermon library and Join online pages */
 
   #sermon-viewport .container {

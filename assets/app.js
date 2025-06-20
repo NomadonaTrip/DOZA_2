@@ -25,7 +25,9 @@ class SpecialHeader extends HTMLElement {
                     <nav>
                         <div><a href="index.html">Home</a></div>
                         <div><a href="about-us.html">About Us</a></div>
-                        <div><a href="contact-us.html">Contact Us</a></div>
+                        <div><a href="our-ministries.html">Our Ministries</a></div>
+                        <div><a href="give.html">Give</a></div>
+                        <div><a href="contact-us.html">reach out</a></div>
                         
                     </nav>
                 </aside>         
