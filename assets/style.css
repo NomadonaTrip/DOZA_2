@@ -2229,19 +2229,19 @@ header * {
 .contact-message h1 {
   font-family: var(--doza-family);
 }
-.contact-form {
+#contact-form {
   width: 50%;
   margin-top: 7rem;
 }
-.contact-form form {
+#contact-form form {
   display: flex;
   flex-direction: column;
   font-family: var(--doza-support);
 }
-.contact-form label {
+#contact-form label {
   font-weight: 500;
 }
-.contact-form input[type="text"],
+#contact-form input[type="text"],
 input[type="email"] {
   width: 100%;
   height: 2rem;
