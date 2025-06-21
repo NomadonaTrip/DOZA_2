@@ -68,17 +68,18 @@ class SpecialFooter extends HTMLElement {
         </div>
         <div class="footer-section">
           <h3>Service Times</h3>
-          <p>Sunday Service: 10:00 AM<br>
-          Wednesday Prayer: 7:00 PM<br>
+          <p>Sunday Service: 6:30 PM<br>
+          Wednesday Prayer: 6:00 PM<br>
           Monthly Revival: First Friday 6:00 PM</p>
         </div>
         <div class="footer-section">
           <h3>Connect With Us</h3>
           <p>
-            <a href="#">Facebook</a><br>
+            
+            <a href="https://www.facebook.com/dozmica" target="_blank" rel="noopener noreferrer">Facebook</a><br>
             <a href="https://www.youtube.com/@dozmitherevivalcenter" target="_blank" rel="noopener noreferrer"> YouTube</a><br>
-            <a href="#">Instagram</a><br>
-            <a href="#">Twitter</a>
+            <a href="https://www.instagram.com/dozmi.therevivalcenter/" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+            
           </p>
         </div>
       </div>

@@ -41,6 +41,8 @@ body {
   margin: 0px auto;
   padding: 0px;
   line-height: 1.6rem;
+  scroll-margin-top: 500px;
+  scroll-behavior: smooth;
 }
 .responsive-header {
   display: flex;
@@ -62,12 +64,12 @@ body {
   box-shadow: 0 2px 4px rgba(21, 21, 21, 0.1);
 }
 #call-button button {
-  background-color: var(--brand-color-red);
+  background-color: var(--brand-color-orange);
   border: none;
   width: 8rem;
 }
 #call-button button:hover {
-  border: 1px solid var(--brand-color-red);
+  border: 1px solid var(--brand-color-orange);
   background-color: transparent;
 }
 .responsive-header > .mobile-call-button {
