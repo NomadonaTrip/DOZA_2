@@ -37,11 +37,12 @@
   --container-width-xs: 95%;
 }
 
-body {
+body,
+html {
   margin: 0px auto;
   padding: 0px;
   line-height: 1.6rem;
-  scroll-margin-top: 500px;
+  scroll-padding-top: 100px;
   scroll-behavior: smooth;
 }
 .responsive-header {
@@ -1830,7 +1831,7 @@ header * {
   content: "✓"; /* Or other icon like '✞', '▶' */
   position: absolute;
   left: 0;
-  color: var(--brand-color-red); /* Theme color for bullets */
+  color: var(--brand-color-orange); /* Theme color for bullets */
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -1923,8 +1924,8 @@ header * {
 
 .btn-ministry:hover {
   background-color: transparent;
-  color: var(--brand-color-red);
-  border: 1px solid var(--brand-color-red);
+  color: var(--brand-color-orange);
+  border: 1px solid var(--brand-color-orange);
   transform: translateY(-2px); /* Consistent with .ministry-cta:hover */
 }
 
@@ -2501,6 +2502,10 @@ input[type="email"] {
 
   #contact-us .container {
     width: 80%;
+  }
+  textarea #your-message {
+    height: 5rem;
+    background-color: blue;
   }
   /* =================footer responsiveness here =================== */
 }

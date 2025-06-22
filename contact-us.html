@@ -34,28 +34,37 @@
               <input type="radio" /> <label for="">Yes</label>
               <input type="radio" name="No" /><label for="">No </label>
             </div>
-            <label for="Subject" id="">I want to </label>
+            <label for="message-subject">I want to: </label>
             <select name="" id="Subject">
               <option value="select">Select options</option>
-              <option value="Prayer/ counselling">be Prayed for</option>
-              <option value="Prayer/ counselling">be Counselled with</option>
+              <option value="get to know the church">
+                know more about the revival center
+              </option>
+              <option value="Prayer/ counselling">
+                be Prayed for and Counselled with
+              </option>
               <option value="Volunteer for kids Church">
                 volunteer for kid's Church
               </option>
               <option value="Volunteer for missions">
                 volunteer for a missions program
               </option>
-              <option value="Volunteer to lead lifegroup">
-                lead a lifegroup
+              <option value="Volunteer to lead a lifegroup">
+                start a lifegroup
               </option>
-              <option value="Volunteer to host lifegroup">
-                host a lifegroup
+              <option value="join a lifegroup">join a lifegroup</option>
+              <option value="prayer summit">
+                attend the mom's prayer summit
               </option>
-              <option value="General Enquiry">make an enquiry</option>
               <option value="Donation">make a donation</option>
             </select>
             <label for="Subject" id="">Message </label>
-            <textarea name="message" id="your-message"> </textarea>
+            <textarea
+              name="message"
+              id="your-message"
+              style="min-height: 5rem; max-width: 100%"
+            >
+            </textarea>
             <button type="submit" id="submit-button">Submit</button>
           </form>
         </div>
@@ -63,5 +72,31 @@
     </section>
     <special-footer></special-footer>
     <script src="assets/app.js"></script>
+    <script>
+      // Function to get URL parameters
+      function getURLParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
+
+      // Pre-select the dropdown option when page loads
+      window.addEventListener("DOMContentLoaded", function () {
+        const subjectDropdown = document.getElementById("Subject");
+        const subjectParam = getURLParameter("subject");
+
+        if (subjectParam && subjectDropdown) {
+          // Loop through options to find matching value
+          for (let i = 0; i < subjectDropdown.options.length; i++) {
+            if (
+              subjectDropdown.options[i].value ===
+              decodeURIComponent(subjectParam)
+            ) {
+              subjectDropdown.selectedIndex = i;
+              break;
+            }
+          }
+        }
+      });
+    </script>
   </body>
 </html>
