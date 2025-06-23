@@ -531,7 +531,8 @@ header * {
   font-family: var(--doza-support);
   font-size: 1.2rem;
   text-align: left;
-  font-weight: 600;
+  font-weight: 500;
+  margin-top: 1rem;
 }
 /* These describe the buttons in the "New Here?" div */
 .welcome-buttons {
