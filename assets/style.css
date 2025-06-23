@@ -509,6 +509,7 @@ header * {
   grid-row: span 2;
   /* background-color: #151515; */
   background-image: var(--brand-gradient-orange);
+  color: var(--text-dark);
 }
 .new-here img {
   width: 250px;
@@ -728,6 +729,7 @@ header * {
   border-radius: 20px;
   color: white;
   padding: 5%;
+  grid-column: span 2;
 }
 
 .monthly-revival {
