@@ -2855,7 +2855,7 @@ input[type="email"] {
     height: 40vh;
   }
   .welcome-buttons {
-    margin-bottom: 2rem;
+    margin: 2rem 0rem 4rem 0rem;
   }
   /* The our-meetings section of the home page */
 
