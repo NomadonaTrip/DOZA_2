@@ -13,8 +13,8 @@ class SpecialHeader extends HTMLElement {
                 
                 <ul class="navigation">
                     <a href="index.html"><li>Home</li></a>
-                    <a href="about-us.html"><li>About Us</li></a>
-                    <a href="our-ministries.html"><li>Our Ministries</li></a>
+                    <a href="about-us.html" title="Learn about our Holy Spirit-filled church mission in the GTA"><li>About Us</li></a>
+                    <a href="our-ministries.html" title="Discover our bible-believing healing, deliverance and discipleship ministries in Mississauga"><li>Our Ministries</li></a>
                     <a href="give.html"><li>Give</li></a>
                     <a id="call-button" href="contact-us.html"><li><button>reach out</button></li></a>
                 </ul>
