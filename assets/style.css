@@ -89,8 +89,9 @@ html {
   border: 1px solid var(--brand-color-orange);
   border-radius: 10px;
   background-color: var(--brand-color-orange);
-  color: var(--foreground);
+  color: var(--background);
   text-transform: capitalize;
+  margin-bottom: 0.5rem;
 }
 .hamburger-menu {
   --x-width: calc(var(--hamburger-height) * 1.41421356237);
@@ -435,8 +436,8 @@ header * {
 }
 .hero-buttons button {
   background-color: var(--brand-color-orange);
-  color: white;
-  font-weight: 300;
+  color: var(--background);
+  font-weight: 400;
   font-size: large;
   border: none;
   margin-top: 20px;
@@ -460,6 +461,7 @@ header * {
   font-family: var(--doza-family);
   font-size: 1.3rem;
   font-weight: 500;
+  color: var(--foreground);
 }
 
 .hero-buttons .two-button:hover {
@@ -578,7 +580,7 @@ header * {
   font-family: var(--doza-support);
   width: 10rem;
   height: 3rem;
-  color: white;
+  color: var(--background);
   font-size: 1rem;
   font-weight: 500;
   border-radius: 20px;
@@ -642,7 +644,7 @@ header * {
 .pastor-welcome button {
   background-color: var(--brand-color-orange);
   font-family: var(--doza-support);
-  color: white;
+  color: var(--background);
   width: 6rem;
   height: 2rem;
   border: none;
@@ -850,7 +852,7 @@ header * {
 
 .ministry-cta {
   background-color: var(--brand-color-orange);
-  color: white;
+  color: var(--background);
   font-family: var(--doza-support);
   font-size: 1rem;
   font-weight: 500;
