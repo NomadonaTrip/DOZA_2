@@ -69,8 +69,8 @@ class SpecialFooter extends HTMLElement {
         <div class="footer-section">
           <h3>Service Times</h3>
           <p>Sunday Service: 6:30 PM<br>
-          Wednesday Prayer: 6:00 PM<br>
-          Monthly Revival: First Friday 6:00 PM</p>
+          Wednesday Prayer: 6:30 PM<br>
+          
         </div>
         <div class="footer-section">
           <h3>Connect With Us</h3>
